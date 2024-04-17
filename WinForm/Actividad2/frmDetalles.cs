@@ -7,15 +7,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Runtime.CompilerServices.RuntimeHelpers;
 
 namespace Actividad2
 {
-    public partial class Form1 : Form
+    public partial class frmDetalles : Form
     {
-        public Form1()
+        public frmDetalles()
         {
             InitializeComponent();
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            // consulto db (ID == idingresado)
+
+
+
+        }
     }
 }

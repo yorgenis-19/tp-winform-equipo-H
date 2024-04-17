@@ -24,7 +24,7 @@ namespace Actividad2
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Form1 ventana = new Form1();
+            frmIngresarArticulo ventana = new frmIngresarArticulo();
             ventana.ShowDialog();
         }
 
@@ -37,6 +37,12 @@ namespace Actividad2
         private void button1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            frmDetalles frmDetalles = new frmDetalles();
+            frmDetalles.ShowDialog();
         }
     }
 }
