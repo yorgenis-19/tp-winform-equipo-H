@@ -16,5 +16,27 @@ namespace Actividad2
         {
             InitializeComponent();
         }
+
+        private void Menu_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Form1 ventana = new Form1();
+            ventana.ShowDialog();
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            frmEliminar frmEliminar = new frmEliminar();
+            frmEliminar.ShowDialog();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

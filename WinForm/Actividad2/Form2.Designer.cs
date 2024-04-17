@@ -45,6 +45,7 @@
             this.button1.TabIndex = 0;
             this.button1.Text = "Listado de artículos";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -63,6 +64,7 @@
             this.button3.TabIndex = 2;
             this.button3.Text = "Agregar artículos";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button7
             // 
@@ -90,6 +92,7 @@
             this.button9.TabIndex = 6;
             this.button9.Text = "Eliminar artículos";
             this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // button4
             // 
@@ -97,14 +100,14 @@
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(117, 25);
             this.button4.TabIndex = 9;
-            this.button4.Text = "inicar secion";
+            this.button4.Text = "Iniciar sesion";
             this.button4.UseVisualStyleBackColor = true;
             // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(854, 517);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.button8);
@@ -114,6 +117,7 @@
             this.Controls.Add(this.button1);
             this.Name = "Menu";
             this.Text = "MENU";
+            this.Load += new System.EventHandler(this.Menu_Load);
             this.ResumeLayout(false);
 
         }

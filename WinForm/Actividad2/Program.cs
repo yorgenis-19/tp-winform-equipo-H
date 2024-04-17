@@ -16,7 +16,7 @@ namespace Actividad2
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmUsuario());
+            Application.Run(new Menu());
         }
     }
 }
