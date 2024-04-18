@@ -60,14 +60,14 @@
             this.txtBuscar.Location = new System.Drawing.Point(330, 67);
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(128, 22);
-            this.txtBuscar.TabIndex = 1;
+            this.txtBuscar.TabIndex = 0;
             // 
             // btnBuscar
             // 
             this.btnBuscar.Location = new System.Drawing.Point(496, 67);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(84, 23);
-            this.btnBuscar.TabIndex = 2;
+            this.btnBuscar.TabIndex = 1;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
             // 
@@ -132,7 +132,7 @@
             this.comboBox1.Location = new System.Drawing.Point(177, 288);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(209, 24);
-            this.comboBox1.TabIndex = 9;
+            this.comboBox1.TabIndex = 5;
             // 
             // comboBox2
             // 
@@ -140,35 +140,35 @@
             this.comboBox2.Location = new System.Drawing.Point(177, 217);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(209, 24);
-            this.comboBox2.TabIndex = 10;
+            this.comboBox2.TabIndex = 4;
             // 
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(177, 357);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(209, 22);
-            this.textBox1.TabIndex = 11;
+            this.textBox1.TabIndex = 6;
             // 
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(177, 157);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(209, 22);
-            this.textBox2.TabIndex = 12;
+            this.textBox2.TabIndex = 3;
             // 
             // textBox3
             // 
             this.textBox3.Location = new System.Drawing.Point(177, 99);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(209, 22);
-            this.textBox3.TabIndex = 13;
+            this.textBox3.TabIndex = 2;
             // 
             // btnModificar
             // 
             this.btnModificar.Location = new System.Drawing.Point(228, 395);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(133, 43);
-            this.btnModificar.TabIndex = 14;
+            this.btnModificar.TabIndex = 7;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = true;
             // 
@@ -177,7 +177,7 @@
             this.btnCancelar.Location = new System.Drawing.Point(419, 395);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(133, 43);
-            this.btnCancelar.TabIndex = 15;
+            this.btnCancelar.TabIndex = 8;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             // 
