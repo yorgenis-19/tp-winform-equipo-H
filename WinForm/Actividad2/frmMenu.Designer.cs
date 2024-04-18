@@ -28,94 +28,90 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnListaArticulos = new System.Windows.Forms.Button();
+            this.btnBuscarArticulos = new System.Windows.Forms.Button();
+            this.btnAgregarArticulos = new System.Windows.Forms.Button();
+            this.btnVerDetalleArticulo = new System.Windows.Forms.Button();
+            this.btnModificarArticulos = new System.Windows.Forms.Button();
+            this.btnEliminarArticulos = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // button1
+            // btnListaArticulos
             // 
-            this.button1.Location = new System.Drawing.Point(277, 40);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(192, 37);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Listado de artículos";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnListaArticulos.Location = new System.Drawing.Point(369, 49);
+            this.btnListaArticulos.Margin = new System.Windows.Forms.Padding(4);
+            this.btnListaArticulos.Name = "btnListaArticulos";
+            this.btnListaArticulos.Size = new System.Drawing.Size(256, 46);
+            this.btnListaArticulos.TabIndex = 0;
+            this.btnListaArticulos.Text = "Listado de artículos";
+            this.btnListaArticulos.UseVisualStyleBackColor = true;
+            this.btnListaArticulos.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
+            // btnBuscarArticulos
             // 
-            this.button2.Location = new System.Drawing.Point(277, 104);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(193, 38);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Búsqueda de artículos por distintos criterios";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnBuscarArticulos.Location = new System.Drawing.Point(369, 128);
+            this.btnBuscarArticulos.Margin = new System.Windows.Forms.Padding(4);
+            this.btnBuscarArticulos.Name = "btnBuscarArticulos";
+            this.btnBuscarArticulos.Size = new System.Drawing.Size(257, 47);
+            this.btnBuscarArticulos.TabIndex = 1;
+            this.btnBuscarArticulos.Text = "Búscar artículos";
+            this.btnBuscarArticulos.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btnAgregarArticulos
             // 
-            this.button3.Location = new System.Drawing.Point(277, 173);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(193, 38);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Agregar artículos";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.btnAgregarArticulos.Location = new System.Drawing.Point(369, 213);
+            this.btnAgregarArticulos.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAgregarArticulos.Name = "btnAgregarArticulos";
+            this.btnAgregarArticulos.Size = new System.Drawing.Size(257, 47);
+            this.btnAgregarArticulos.TabIndex = 2;
+            this.btnAgregarArticulos.Text = "Agregar artículos";
+            this.btnAgregarArticulos.UseVisualStyleBackColor = true;
+            this.btnAgregarArticulos.Click += new System.EventHandler(this.button3_Click);
             // 
-            // button7
+            // btnVerDetalleArticulo
             // 
-            this.button7.Location = new System.Drawing.Point(277, 377);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(193, 38);
-            this.button7.TabIndex = 8;
-            this.button7.Text = "Ver detalle de un artículo";
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
+            this.btnVerDetalleArticulo.Location = new System.Drawing.Point(369, 464);
+            this.btnVerDetalleArticulo.Margin = new System.Windows.Forms.Padding(4);
+            this.btnVerDetalleArticulo.Name = "btnVerDetalleArticulo";
+            this.btnVerDetalleArticulo.Size = new System.Drawing.Size(257, 47);
+            this.btnVerDetalleArticulo.TabIndex = 5;
+            this.btnVerDetalleArticulo.Text = "Ver detalle de un artículo";
+            this.btnVerDetalleArticulo.UseVisualStyleBackColor = true;
+            this.btnVerDetalleArticulo.Click += new System.EventHandler(this.button7_Click);
             // 
-            // button8
+            // btnModificarArticulos
             // 
-            this.button8.Location = new System.Drawing.Point(277, 310);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(193, 38);
-            this.button8.TabIndex = 7;
-            this.button8.Text = "Modificar artículos";
-            this.button8.UseVisualStyleBackColor = true;
+            this.btnModificarArticulos.Location = new System.Drawing.Point(369, 382);
+            this.btnModificarArticulos.Margin = new System.Windows.Forms.Padding(4);
+            this.btnModificarArticulos.Name = "btnModificarArticulos";
+            this.btnModificarArticulos.Size = new System.Drawing.Size(257, 47);
+            this.btnModificarArticulos.TabIndex = 4;
+            this.btnModificarArticulos.Text = "Modificar artículos";
+            this.btnModificarArticulos.UseVisualStyleBackColor = true;
             // 
-            // button9
+            // btnEliminarArticulos
             // 
-            this.button9.Location = new System.Drawing.Point(277, 242);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(192, 37);
-            this.button9.TabIndex = 6;
-            this.button9.Text = "Eliminar artículos";
-            this.button9.UseVisualStyleBackColor = true;
-            this.button9.Click += new System.EventHandler(this.button9_Click);
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(681, 3);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(117, 25);
-            this.button4.TabIndex = 9;
-            this.button4.Text = "Iniciar sesion";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnEliminarArticulos.Location = new System.Drawing.Point(369, 298);
+            this.btnEliminarArticulos.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEliminarArticulos.Name = "btnEliminarArticulos";
+            this.btnEliminarArticulos.Size = new System.Drawing.Size(256, 46);
+            this.btnEliminarArticulos.TabIndex = 3;
+            this.btnEliminarArticulos.Text = "Eliminar artículos";
+            this.btnEliminarArticulos.UseVisualStyleBackColor = true;
+            this.btnEliminarArticulos.Click += new System.EventHandler(this.button9_Click);
             // 
             // Menu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(854, 517);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button7);
-            this.Controls.Add(this.button8);
-            this.Controls.Add(this.button9);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(1139, 636);
+            this.Controls.Add(this.btnVerDetalleArticulo);
+            this.Controls.Add(this.btnModificarArticulos);
+            this.Controls.Add(this.btnEliminarArticulos);
+            this.Controls.Add(this.btnAgregarArticulos);
+            this.Controls.Add(this.btnBuscarArticulos);
+            this.Controls.Add(this.btnListaArticulos);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Menu";
             this.Text = "MENU";
             this.Load += new System.EventHandler(this.Menu_Load);
@@ -125,12 +121,11 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnListaArticulos;
+        private System.Windows.Forms.Button btnBuscarArticulos;
+        private System.Windows.Forms.Button btnAgregarArticulos;
+        private System.Windows.Forms.Button btnVerDetalleArticulo;
+        private System.Windows.Forms.Button btnModificarArticulos;
+        private System.Windows.Forms.Button btnEliminarArticulos;
     }
 }

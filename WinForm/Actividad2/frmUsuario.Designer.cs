@@ -29,87 +29,90 @@
         private void InitializeComponent()
         {
             this.Rdatos = new System.Windows.Forms.CheckBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.User = new System.Windows.Forms.TextBox();
-            this.lbUser = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.tbPassword = new System.Windows.Forms.TextBox();
+            this.btnIngresar = new System.Windows.Forms.Button();
+            this.txtUser = new System.Windows.Forms.TextBox();
+            this.lblUser = new System.Windows.Forms.Label();
+            this.lblContraseña = new System.Windows.Forms.Label();
+            this.txtContraseña = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // Rdatos
             // 
             this.Rdatos.AutoSize = true;
-            this.Rdatos.Location = new System.Drawing.Point(335, 230);
+            this.Rdatos.Location = new System.Drawing.Point(447, 283);
+            this.Rdatos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Rdatos.Name = "Rdatos";
-            this.Rdatos.Size = new System.Drawing.Size(99, 17);
+            this.Rdatos.Size = new System.Drawing.Size(123, 20);
             this.Rdatos.TabIndex = 0;
             this.Rdatos.Text = "Recordar datos\r\n";
             this.Rdatos.UseVisualStyleBackColor = true;
-            this.Rdatos.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged_1);
             // 
-            // button1
+            // btnIngresar
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(296, 309);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(182, 50);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "INGRESAR";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnIngresar.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIngresar.Location = new System.Drawing.Point(395, 380);
+            this.btnIngresar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnIngresar.Name = "btnIngresar";
+            this.btnIngresar.Size = new System.Drawing.Size(243, 62);
+            this.btnIngresar.TabIndex = 1;
+            this.btnIngresar.Text = "INGRESAR";
+            this.btnIngresar.UseVisualStyleBackColor = true;
+            this.btnIngresar.Click += new System.EventHandler(this.button1_Click);
             // 
-            // User
+            // txtUser
             // 
-            this.User.Location = new System.Drawing.Point(296, 98);
-            this.User.Name = "User";
-            this.User.Size = new System.Drawing.Size(182, 20);
-            this.User.TabIndex = 2;
-            this.User.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.txtUser.Location = new System.Drawing.Point(395, 121);
+            this.txtUser.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtUser.Name = "txtUser";
+            this.txtUser.Size = new System.Drawing.Size(241, 22);
+            this.txtUser.TabIndex = 2;
             // 
-            // lbUser
+            // lblUser
             // 
-            this.lbUser.AutoSize = true;
-            this.lbUser.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbUser.Location = new System.Drawing.Point(353, 56);
-            this.lbUser.Name = "lbUser";
-            this.lbUser.Size = new System.Drawing.Size(67, 19);
-            this.lbUser.TabIndex = 3;
-            this.lbUser.Text = "Usuario";
+            this.lblUser.AutoSize = true;
+            this.lblUser.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUser.Location = new System.Drawing.Point(471, 69);
+            this.lblUser.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblUser.Name = "lblUser";
+            this.lblUser.Size = new System.Drawing.Size(85, 26);
+            this.lblUser.TabIndex = 3;
+            this.lblUser.Text = "Usuario";
             // 
-            // label1
+            // lblContraseña
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(339, 147);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(95, 19);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Contraseña";
+            this.lblContraseña.AutoSize = true;
+            this.lblContraseña.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblContraseña.Location = new System.Drawing.Point(452, 181);
+            this.lblContraseña.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblContraseña.Name = "lblContraseña";
+            this.lblContraseña.Size = new System.Drawing.Size(119, 26);
+            this.lblContraseña.TabIndex = 4;
+            this.lblContraseña.Text = "Contraseña";
             // 
-            // tbPassword
+            // txtContraseña
             // 
-            this.tbPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbPassword.Location = new System.Drawing.Point(296, 189);
-            this.tbPassword.Name = "tbPassword";
-            this.tbPassword.PasswordChar = '*';
-            this.tbPassword.Size = new System.Drawing.Size(182, 22);
-            this.tbPassword.TabIndex = 5;
-            this.tbPassword.TextChanged += new System.EventHandler(this.textBox1_TextChanged_1);
+            this.txtContraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtContraseña.Location = new System.Drawing.Point(395, 233);
+            this.txtContraseña.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtContraseña.Name = "txtContraseña";
+            this.txtContraseña.PasswordChar = '*';
+            this.txtContraseña.Size = new System.Drawing.Size(241, 26);
+            this.txtContraseña.TabIndex = 5;
             // 
             // frmUsuario
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.tbPassword);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.lbUser);
-            this.Controls.Add(this.User);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.Controls.Add(this.txtContraseña);
+            this.Controls.Add(this.lblContraseña);
+            this.Controls.Add(this.lblUser);
+            this.Controls.Add(this.txtUser);
+            this.Controls.Add(this.btnIngresar);
             this.Controls.Add(this.Rdatos);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmUsuario";
             this.Text = "frmUsuario";
-            this.Load += new System.EventHandler(this.frmUsuario_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -118,10 +121,10 @@
         #endregion
 
         private System.Windows.Forms.CheckBox Rdatos;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox User;
-        private System.Windows.Forms.Label lbUser;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox tbPassword;
+        private System.Windows.Forms.Button btnIngresar;
+        private System.Windows.Forms.TextBox txtUser;
+        private System.Windows.Forms.Label lblUser;
+        private System.Windows.Forms.Label lblContraseña;
+        private System.Windows.Forms.TextBox txtContraseña;
     }
 }
