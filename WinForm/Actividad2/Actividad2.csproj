@@ -61,11 +61,23 @@
     </Compile>
     <Compile Include="Articulo.cs" />
     <Compile Include="Categoria.cs" />
+    <Compile Include="frmBuscarArt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBuscarArt.Designer.cs">
+      <DependentUpon>frmBuscarArt.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmIngresarArticulo.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmIngresarArticulo.Designer.cs">
       <DependentUpon>frmIngresarArticulo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmListadoArt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListadoArt.Designer.cs">
+      <DependentUpon>frmListadoArt.cs</DependentUpon>
     </Compile>
     <Compile Include="frmMenu.cs">
       <SubType>Form</SubType>
@@ -106,6 +118,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AgregarMarca.resx">
       <DependentUpon>AgregarMarca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBuscarArt.resx">
+      <DependentUpon>frmBuscarArt.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmIngresarArticulo.resx">
       <DependentUpon>frmIngresarArticulo.cs</DependentUpon>

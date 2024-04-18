@@ -36,7 +36,8 @@ namespace Actividad2
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            frmListadoArt mostrarArt = new frmListadoArt();
+            mostrarArt.ShowDialog();    
         }
 
         private void button7_Click(object sender, EventArgs e)
@@ -49,6 +50,12 @@ namespace Actividad2
         {
             ModificarArticulo modificar = new ModificarArticulo();
             modificar.ShowDialog();
+        }
+
+        private void btnBuscarArticulos_Click(object sender, EventArgs e)
+        {
+            frmBuscarArt buscarArt = new frmBuscarArt();
+            buscarArt.ShowDialog(); 
         }
     }
 }
