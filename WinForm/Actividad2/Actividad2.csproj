@@ -48,6 +48,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Articulo.cs" />
+    <Compile Include="Categoria.cs" />
     <Compile Include="frmIngresarArticulo.cs">
       <SubType>Form</SubType>
     </Compile>
