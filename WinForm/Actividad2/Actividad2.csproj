@@ -93,6 +93,12 @@
     </Compile>
     <Compile Include="Imagen.cs" />
     <Compile Include="Marca.cs" />
+    <Compile Include="ModificarArticulo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModificarArticulo.Designer.cs">
+      <DependentUpon>ModificarArticulo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="AgregarCategoria.resx">
@@ -115,6 +121,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmUsuario.resx">
       <DependentUpon>frmUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModificarArticulo.resx">
+      <DependentUpon>ModificarArticulo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

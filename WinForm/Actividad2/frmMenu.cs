@@ -44,5 +44,11 @@ namespace Actividad2
             frmDetalles frmDetalles = new frmDetalles();
             frmDetalles.ShowDialog();
         }
+
+        private void btnModificarArticulos_Click(object sender, EventArgs e)
+        {
+            ModificarArticulo modificar = new ModificarArticulo();
+            modificar.ShowDialog();
+        }
     }
 }
