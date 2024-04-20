@@ -32,6 +32,7 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.cbEliminar = new System.Windows.Forms.CheckBox();
+            this.btnCerrar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lalID
@@ -57,7 +58,7 @@
             // btnAgregar
             // 
             this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.btnAgregar.Location = new System.Drawing.Point(286, 236);
+            this.btnAgregar.Location = new System.Drawing.Point(204, 237);
             this.btnAgregar.Margin = new System.Windows.Forms.Padding(2);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(168, 67);
@@ -75,11 +76,22 @@
             this.cbEliminar.Text = "Confirmar eleccion";
             this.cbEliminar.UseVisualStyleBackColor = true;
             // 
+            // btnCerrar
+            // 
+            this.btnCerrar.Location = new System.Drawing.Point(401, 237);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(150, 67);
+            this.btnCerrar.TabIndex = 35;
+            this.btnCerrar.Text = "Cerrar";
+            this.btnCerrar.UseVisualStyleBackColor = true;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
+            // 
             // frmEliminar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.cbEliminar);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.textBox2);
@@ -97,5 +109,6 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.CheckBox cbEliminar;
+        private System.Windows.Forms.Button btnCerrar;
     }
 }

@@ -32,5 +32,10 @@ namespace Actividad2
             cboCategoria.Items.Add("Articulos de cocina");
             cboCategoria.DropDownStyle = ComboBoxStyle.DropDownList;
         }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

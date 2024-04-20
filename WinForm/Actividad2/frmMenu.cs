@@ -57,5 +57,11 @@ namespace Actividad2
             frmBuscarArt buscarArt = new frmBuscarArt();
             buscarArt.ShowDialog(); 
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            AgregarMarca mmom = new AgregarMarca();
+            mmom.ShowDialog();  
+        }
     }
 }

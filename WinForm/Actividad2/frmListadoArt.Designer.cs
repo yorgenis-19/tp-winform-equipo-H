@@ -30,6 +30,7 @@
         {
             this.webBrowser1 = new System.Windows.Forms.WebBrowser();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnCerrar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // webBrowser1
@@ -49,11 +50,22 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "ARTICULOS";
             // 
+            // btnCerrar
+            // 
+            this.btnCerrar.Location = new System.Drawing.Point(560, 59);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(169, 38);
+            this.btnCerrar.TabIndex = 3;
+            this.btnCerrar.Text = "cerrar";
+            this.btnCerrar.UseVisualStyleBackColor = true;
+            this.btnCerrar.Click += new System.EventHandler(this.button1_Click);
+            // 
             // frmListadoArt
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.webBrowser1);
             this.Name = "frmListadoArt";
@@ -67,5 +79,6 @@
 
         private System.Windows.Forms.WebBrowser webBrowser1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnCerrar;
     }
 }
