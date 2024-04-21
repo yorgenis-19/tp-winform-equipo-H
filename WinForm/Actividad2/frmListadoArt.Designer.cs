@@ -28,18 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.webBrowser1 = new System.Windows.Forms.WebBrowser();
             this.label1 = new System.Windows.Forms.Label();
             this.btnCerrar = new System.Windows.Forms.Button();
+            this.dgbArticulos = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgbArticulos)).BeginInit();
             this.SuspendLayout();
-            // 
-            // webBrowser1
-            // 
-            this.webBrowser1.Location = new System.Drawing.Point(12, 59);
-            this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
-            this.webBrowser1.Name = "webBrowser1";
-            this.webBrowser1.Size = new System.Drawing.Size(503, 308);
-            this.webBrowser1.TabIndex = 1;
             // 
             // label1
             // 
@@ -60,25 +53,34 @@
             this.btnCerrar.UseVisualStyleBackColor = true;
             this.btnCerrar.Click += new System.EventHandler(this.button1_Click);
             // 
+            // dgbArticulos
+            // 
+            this.dgbArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgbArticulos.Location = new System.Drawing.Point(1, 50);
+            this.dgbArticulos.Name = "dgbArticulos";
+            this.dgbArticulos.Size = new System.Drawing.Size(537, 285);
+            this.dgbArticulos.TabIndex = 4;
+            // 
             // frmListadoArt
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.dgbArticulos);
             this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.webBrowser1);
             this.Name = "frmListadoArt";
             this.Text = "frmListadoArt";
+            this.Load += new System.EventHandler(this.frmListadoArt_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgbArticulos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.WebBrowser webBrowser1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnCerrar;
+        private System.Windows.Forms.DataGridView dgbArticulos;
     }
 }

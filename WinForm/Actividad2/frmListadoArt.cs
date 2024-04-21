@@ -21,5 +21,11 @@ namespace Actividad2
         {
             this.Close();
         }
+
+        private void frmListadoArt_Load(object sender, EventArgs e)
+        {
+            ArticuloNegocio negArt = new ArticuloNegocio();
+            dgbArticulos.DataSource = negArt.listar();
+        }
     }
 }
