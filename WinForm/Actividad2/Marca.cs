@@ -9,6 +9,13 @@ namespace Actividad2
     internal class Marca
     {
         public int Id { get; set; }
-        public string Nombre { get; set; }
+        public string Descripcion { get; set; }
+
+        public override string ToString()
+        {
+            return Descripcion; 
+        }
+
+
     }
 }

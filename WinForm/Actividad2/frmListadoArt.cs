@@ -28,7 +28,7 @@ namespace Actividad2
             ArticuloNegocio negArt = new ArticuloNegocio();
             listaArticulos = negArt.listar();
             dgbArticulos.DataSource = listaArticulos;
-            //dgbArticulos.Columns["imagenUrl"].Visible = false;
+            //dgbArticulos.Columns["ImagenUrl"].Visible = false;
         }
 
 
@@ -49,7 +49,7 @@ namespace Actividad2
             }
             catch (Exception)
             {
-                pbArticulos.Load("https://upload.wikimedia.org/wikipedia/commons/a/a3/Image-not-found.png");
+                pbArticulos.Load("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgNZcEIRZucZlqbOJpbEPlAcrj7OR7rgNKmj5m4Az8lg&s");
                 
             }
         }

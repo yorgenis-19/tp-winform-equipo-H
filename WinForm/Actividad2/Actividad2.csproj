@@ -60,7 +60,6 @@
       <DependentUpon>AgregarMarca.cs</DependentUpon>
     </Compile>
     <Compile Include="Articulo.cs" />
-    <Compile Include="ArticuloDB.cs" />
     <Compile Include="ArticuloNegocio.cs" />
     <Compile Include="Categoria.cs" />
     <Compile Include="frmBuscarArt.cs">
