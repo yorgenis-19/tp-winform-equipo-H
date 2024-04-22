@@ -21,7 +21,7 @@ namespace Actividad2
             {
                 conexion.ConnectionString = "server=.\\SQLEXPRESS; database=CATALOGO_P3_DB; integrated security=true";
                 comando.CommandType = System.Data.CommandType.Text;
-                comando.CommandText = "SELECT Id, Codigo, Nombre, Descripcion, Precio FROM ARTICULOS";
+                comando.CommandText = "select A.Id, Codigo, Nombre, Descripcion ,Precio, ImagenUrl from ARTICULOS A, IMAGENES I where I.IdArticulo = A.Id";
                 comando.Connection = conexion;  
 
                 conexion.Open();
@@ -35,6 +35,9 @@ namespace Actividad2
                     aux.nombre = (string)lector["Nombre"];
                     aux.descripcion = (string)lector["Descripcion"];
                     aux.precio = (decimal)lector["Precio"];
+                    aux.imagen = new Imagen();
+                    aux.imagen.url = (string)lector["ImagenUrl"];
+
 
                     lista.Add(aux);
                 }
