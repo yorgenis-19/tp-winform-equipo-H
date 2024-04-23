@@ -124,7 +124,7 @@ namespace Actividad2
             {
                 return;
             }
-            //MarcaDB marcaDB = new MarcaDB();
+            MarcaDB marcaDB = new MarcaDB();
             //CategoriaDB categoriaDB = new CategoriaDB();
 
             //ArticuloDB articuloDB = new ArticuloDB();
@@ -134,7 +134,7 @@ namespace Actividad2
             articulo.descripcion = txtDescripcion.Text;
             articulo.Marca = new Marca();
             articulo.Marca.Descripcion = cmbMarca.Text;
-            articulo.Marca.Id = marcaDB.obtener(articulo.marca.Descripcion);
+            articulo.Marca.Id = marcaDB.obtener(articulo.Marca.Descripcion);
             articulo.Categoria = new Categoria();
             articulo.Categoria.Descripcion = cmbCategoria.Text;
             articulo.Categoria.Id = categoriaDB.obtener(articulo.categoria.Descripcion);

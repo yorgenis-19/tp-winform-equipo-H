@@ -106,6 +106,7 @@
     </Compile>
     <Compile Include="Imagen.cs" />
     <Compile Include="Marca.cs" />
+    <Compile Include="MarcaDB.cs" />
     <Compile Include="ModificarArticulo.cs">
       <SubType>Form</SubType>
     </Compile>
