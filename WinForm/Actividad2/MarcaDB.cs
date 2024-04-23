@@ -87,5 +87,50 @@ namespace Actividad2
                 connection.Close();
             }
         }
+
+        public string obtener(int id)
+        {
+            string marcaName;
+            SqlConnection connection = new SqlConnection();
+            SqlCommand cmd = new SqlCommand();
+            SqlDataReader reader = null;
+
+            try
+            {
+                connection.ConnectionString = "server=.\\SQLEXPRESS; database=CATALOGO_P3_DB; integrated security=true";
+                cmd.CommandType = System.Data.CommandType.Text;
+                cmd.CommandText = "SELECT * FROM [dbo].[MARCAS] WHERE Id = @id";
+                cmd.Parameters.AddWithValue("@id", id);
+                cmd.Connection = connection;
+
+                connection.Open();
+                reader = cmd.ExecuteReader();
+
+                if (reader.Read())
+                {
+
+                    marcaName = (string)reader["Descripcion"];
+                }
+                else
+                {
+                    marcaName = "N/A";
+                }
+
+                return marcaName;
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+            finally
+            {
+                if (reader != null)
+                {
+                    reader.Close();
+                }
+
+                connection.Close();
+            }
+        }
     }
 }

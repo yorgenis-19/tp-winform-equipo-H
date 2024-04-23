@@ -127,7 +127,7 @@ namespace Actividad2
             MarcaDB marcaDB = new MarcaDB();
             //CategoriaDB categoriaDB = new CategoriaDB();
 
-            //ArticuloDB articuloDB = new ArticuloDB();
+            ArticuloDB articuloDB = new ArticuloDB();
             Articulo articulo = new Articulo();
             articulo.codigo = txtCodigo.Text;
             articulo.nombre = txtNombre.Text;
@@ -140,7 +140,16 @@ namespace Actividad2
             articulo.Categoria.Id = categoriaDB.obtener(articulo.categoria.Descripcion);
             articulo.precio = numPrecio.Value;
 
-            //articuloDB.agregar(articulo);
+            articuloDB.agregar(articulo);
+
+            MessageBox.Show("Articulo agregado exitosamente");
+            txtCodigo.Text = "";
+            txtNombre.Text = "";
+            txtDescripcion.Text = "";
+            cmbMarca.Text = "";
+            cmbCategoria.Text = "";
+            numPrecio.Value = 0;
+           
         }
     }
 }
