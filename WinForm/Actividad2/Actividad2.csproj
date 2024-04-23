@@ -64,6 +64,7 @@
     <Compile Include="ArticuloDB.cs" />
     <Compile Include="ArticuloNegocio.cs" />
     <Compile Include="Categoria.cs" />
+    <Compile Include="CategoriaDB.cs" />
     <Compile Include="frmBuscarArt.cs">
       <SubType>Form</SubType>
     </Compile>
