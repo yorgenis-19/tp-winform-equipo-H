@@ -90,9 +90,9 @@ namespace Actividad2
 
         private bool ValidarCategoria()
         {
-            CategoriaDB categoriaDB = new CategoriaDB();
+           // CategoriaDB categoriaDB = new CategoriaDB();
             List<Categoria> listaCategoria = new List<Categoria>();
-            listaCategoria = categoriaDB.listar();
+           // listaCategoria = categoriaDB.listar();
             foreach (var categoria in listaCategoria)
             {
                 if (categoria.Descripcion == cmbCategoria.Text)
@@ -137,7 +137,7 @@ namespace Actividad2
             articulo.Marca.Id = marcaDB.obtener(articulo.Marca.Descripcion);
             articulo.Categoria = new Categoria();
             articulo.Categoria.Descripcion = cmbCategoria.Text;
-            articulo.Categoria.Id = categoriaDB.obtener(articulo.categoria.Descripcion);
+           // articulo.Categoria.Id = categoriaDB.obtener(articulo.categoria.Descripcion);
             articulo.precio = numPrecio.Value;
 
             articuloDB.agregar(articulo);

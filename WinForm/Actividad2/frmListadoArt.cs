@@ -54,6 +54,27 @@ namespace Actividad2
             }
         }
 
-    
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            List<Articulo> listaBusqueda;
+
+            string busqueda = txtBuscar.Text;
+
+            if(busqueda!= "")
+            {
+
+            listaBusqueda = listaArticulos.FindAll(art => art.id == int.Parse(busqueda));
+            }
+            else
+            {
+                listaBusqueda = listaArticulos;
+            }
+
+
+            dgbArticulos.DataSource = null;
+            dgbArticulos.DataSource = listaBusqueda;
+            dgbArticulos.Columns["Codigo"].Visible = false;
+            
+        }
     }
 }

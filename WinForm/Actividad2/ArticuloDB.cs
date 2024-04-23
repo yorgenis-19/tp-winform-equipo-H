@@ -50,7 +50,7 @@ namespace Actividad2
                     articulo.Marca.Descripcion = marcaDB.obtener(idMarca);
                     int idCategoria = (int)datos.Lector["IdCategoria"];
                     articulo.Categoria = new Categoria();
-                    articulo.Categoria.Descripcion = categoriaDB.obtener(idCategoria);
+                    //articulo.Categoria.Descripcion = categoriaDB.obtener(idCategoria);
                     articulo.precio = (decimal)datos.Lector["Precio"];
                     lista.Add(articulo);
 

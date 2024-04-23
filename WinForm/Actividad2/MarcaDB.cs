@@ -75,7 +75,7 @@ namespace Actividad2
             }
             catch (Exception ex)
             {
-                throw;
+                throw ex;
             }
             finally
             {
@@ -120,7 +120,7 @@ namespace Actividad2
             }
             catch (Exception ex)
             {
-                throw;
+                throw ex;
             }
             finally
             {
