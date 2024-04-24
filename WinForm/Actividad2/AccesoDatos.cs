@@ -60,6 +60,7 @@ namespace Actividad2
             }
         }
 
+
         public void setearParametro(string nombre, object valor)
         {
             comando.Parameters.AddWithValue(nombre, valor);

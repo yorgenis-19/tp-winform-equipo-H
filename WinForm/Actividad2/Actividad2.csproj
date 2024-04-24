@@ -48,6 +48,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AccesoDatos.cs" />
+    <Compile Include="agregarArt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="agregarArt.Designer.cs">
+      <DependentUpon>agregarArt.cs</DependentUpon>
+    </Compile>
     <Compile Include="AgregarCategoria.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -124,6 +130,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="agregarArt.resx">
+      <DependentUpon>agregarArt.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AgregarCategoria.resx">
       <DependentUpon>AgregarCategoria.cs</DependentUpon>
     </EmbeddedResource>

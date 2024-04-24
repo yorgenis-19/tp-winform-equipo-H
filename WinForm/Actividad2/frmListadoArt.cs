@@ -31,7 +31,13 @@ namespace Actividad2
             //dgbArticulos.Columns["ImagenUrl"].Visible = false;
         }
 
-
+        private void cargar()
+        {
+            ArticuloNegocio negArt = new ArticuloNegocio();
+            listaArticulos = negArt.listar();
+            dgbArticulos.DataSource = listaArticulos;
+            //dgbArticulos.Columns["ImagenUrl"].Visible = false;
+        }
 
         private void dgbArticulos_SelectionChanged(object sender, EventArgs e)
         {
@@ -63,7 +69,7 @@ namespace Actividad2
             if(busqueda!= "")
             {
 
-            listaBusqueda = listaArticulos.FindAll(art => art.id == int.Parse(busqueda));
+            listaBusqueda = listaArticulos.FindAll(art =>  art.id == int.Parse(busqueda));
             }
             else
             {
@@ -75,6 +81,52 @@ namespace Actividad2
             dgbArticulos.DataSource = listaBusqueda;
             dgbArticulos.Columns["Codigo"].Visible = false;
             
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Articulo seleccionado;
+
+            try
+            {
+                DialogResult respuesta = MessageBox.Show("¿Estas seguro que queres eliminar?", "Eliminando", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if(respuesta == DialogResult.Yes) 
+                { 
+                    seleccionado = (Articulo)dgbArticulos.CurrentRow.DataBoundItem;
+                    eliminarArticulos(seleccionado.id);
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+        public void eliminarArticulos(int id)
+        {
+            try
+            {
+                AccesoDatos datos = new AccesoDatos();
+                datos.setearConsulta("delete from ARTICULOS where id = @id");
+                datos.setearParametro("@id", id);
+                datos.ejecutarAccion();
+                cargar();
+
+
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
+
+        }
+
+        private void btnAgregar_Click_1(object sender, EventArgs e)
+        {
+            agregarArt agregarArt = new agregarArt();
+            agregarArt.ShowDialog();
         }
     }
 }
