@@ -63,7 +63,7 @@ namespace Actividad2
 
             foreach (var marca in listaMarca)
             {
-                if (marca.Descripcion == cmbMarca.Text)
+                if (marca.Descripcion == txtbMarca.Text)
                 {
                     return true;
                 }
@@ -79,7 +79,7 @@ namespace Actividad2
             listaCategoria = categoriaDB.listar();
             foreach (var categoria in listaCategoria)
             {
-                if (categoria.Descripcion == cmbCategoria.Text)
+                if (categoria.Descripcion == nCategoria.Text)
                 {
                     return true;
                 }
@@ -118,12 +118,12 @@ namespace Actividad2
             articulo.nombre = txtNombre.Text;
             articulo.descripcion = txtDescripcion.Text;
             articulo.Marca = new Marca();
-            articulo.Marca.Descripcion = cmbMarca.Text;
+            articulo.Marca.Descripcion = txtbMarca.Text;
             articulo.Marca.Id = marcaDB.obtener(articulo.Marca.Descripcion);
             articulo.Categoria = new Categoria();
-            articulo.Categoria.Descripcion = cmbCategoria.Text;
+            articulo.Categoria.Descripcion = nCategoria.Text;
             articulo.Categoria.Id = categoriaDB.obtener(articulo.Categoria.Descripcion);
-            articulo.precio = numPrecio.Value;
+            articulo.precio = nupdPrecio.Value;
 
             articuloDB.agregar(articulo);
 
@@ -131,9 +131,9 @@ namespace Actividad2
             txtCodigo.Text = "";
             txtNombre.Text = "";
             txtDescripcion.Text = "";
-            cmbMarca.Text = "";
-            cmbCategoria.Text = "";
-            numPrecio.Value = 0;
+            txtbMarca.Text = "";
+            nCategoria.Text = "";
+            nupdPrecio.Value = 0;
         }
 
         private void button1_Click(object sender, EventArgs e)
