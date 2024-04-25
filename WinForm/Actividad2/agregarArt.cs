@@ -22,32 +22,118 @@ namespace Actividad2
 
         }
 
+        private bool validateFields()
+        {
+            if (txtCodigo.Text.Length == 0)
+            {
+                MessageBox.Show("Codigo sin llenar");
+                return false;
+            }
+            if (txtNombre.Text.Length == 0)
+            {
+                MessageBox.Show("Nombre sin llenar");
+                return false;
+            }
+            if (txtDescripcion.Text.Length == 0)
+            {
+                MessageBox.Show("Descripcion sin llenar");
+                return false;
+            }
+            if (!ValidarMarca())
+            {
+                return false;
+            }
+            if (!ValidarCategoria())
+            {
+                return false;
+            }
+            if (yaExiste())
+            {
+                MessageBox.Show("Ya existe un Articulo con ese codigo");
+                return false;
+            }
+            return true;
+        }
+
+        private bool ValidarMarca()
+        {
+            MarcaDB marcaDB = new MarcaDB();
+            List<Marca> listaMarca = new List<Marca>();
+            listaMarca = marcaDB.listar();
+
+            foreach (var marca in listaMarca)
+            {
+                if (marca.Descripcion == cmbMarca.Text)
+                {
+                    return true;
+                }
+            }
+            MessageBox.Show("Marca no valida");
+            return false;
+        }
+
+        private bool ValidarCategoria()
+        {
+            CategoriaDB categoriaDB = new CategoriaDB();
+            List<Categoria> listaCategoria = new List<Categoria>();
+            listaCategoria = categoriaDB.listar();
+            foreach (var categoria in listaCategoria)
+            {
+                if (categoria.Descripcion == cmbCategoria.Text)
+                {
+                    return true;
+                }
+            }
+            MessageBox.Show("Categoria no valida");
+            return false;
+        }
+
+        public bool yaExiste()
+        {
+            ArticuloDB articuloDB = new ArticuloDB();
+            List<Articulo> articulos = new List<Articulo>();
+            articulos = articuloDB.listar();
+            foreach (var articulo in articulos)
+            {
+                if (txtCodigo.Text == articulo.codigo)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            Articulo nuevo = new Articulo();
+            if (!validateFields())
+            {
+                return;
+            }
+            MarcaDB marcaDB = new MarcaDB();
+            CategoriaDB categoriaDB = new CategoriaDB();
+
             ArticuloDB articuloDB = new ArticuloDB();
+            Articulo articulo = new Articulo();
+            articulo.codigo = txtCodigo.Text;
+            articulo.nombre = txtNombre.Text;
+            articulo.descripcion = txtDescripcion.Text;
+            articulo.Marca = new Marca();
+            articulo.Marca.Descripcion = cmbMarca.Text;
+            articulo.Marca.Id = marcaDB.obtener(articulo.Marca.Descripcion);
+            articulo.Categoria = new Categoria();
+            articulo.Categoria.Descripcion = cmbCategoria.Text;
+            articulo.Categoria.Id = categoriaDB.obtener(articulo.Categoria.Descripcion);
+            articulo.precio = numPrecio.Value;
 
-            try
-            {
-                nuevo.nombre = txtNombre.Text;
-                nuevo.descripcion = txtDescripcion.Text;
-                nuevo.codigo = txtCodigo.Text;
-                nuevo.precio = int.Parse(nupdPrecio.Text);
-               
+            articuloDB.agregar(articulo);
 
-                articuloDB.agregar(nuevo);
-                MessageBox.Show("Agregado exitosamente");
-                Close();
-                
-
-                
-
-            }
-            catch (Exception ex)
-            {
-
-                MessageBox.Show(ex.ToString());
-            }
+            MessageBox.Show("Articulo agregado exitosamente");
+            txtCodigo.Text = "";
+            txtNombre.Text = "";
+            txtDescripcion.Text = "";
+            cmbMarca.Text = "";
+            cmbCategoria.Text = "";
+            numPrecio.Value = 0;
         }
 
         private void button1_Click(object sender, EventArgs e)
