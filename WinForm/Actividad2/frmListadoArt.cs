@@ -64,7 +64,7 @@ namespace Actividad2
         {
             List<Articulo> listaBusqueda;
 
-            string busqueda = txtBuscar.Text;
+            string busqueda = txtVerDetalle.Text;
 
             if(busqueda!= "")
             {
@@ -127,6 +127,38 @@ namespace Actividad2
         {
             agregarArt agregarArt = new agregarArt();
             agregarArt.ShowDialog();
+        }
+
+        private void btnFiltrar_Click(object sender, EventArgs e)
+        {
+            List<Articulo> listaFiltrada;
+
+            string filtroMarca = txtFiltroMarc.Text;
+            string filtroCategoria = txtFiltroCat.Text;
+
+            if (filtroMarca != "" || filtroCategoria != "")
+            {
+
+                listaFiltrada = listaArticulos.FindAll(x => x.Marca.ToString() == filtroMarca || x.Categoria.ToString() == filtroCategoria);
+            }
+
+            else if (filtroMarca != "")
+              {
+                    listaFiltrada = listaArticulos.FindAll(x => x.Marca.ToString() == filtroMarca);
+              }
+              else if (filtroCategoria != ""){
+                        listaFiltrada = listaArticulos.FindAll(x => x.Categoria.ToString() == filtroCategoria);
+               }
+                
+            else
+            {
+                listaFiltrada = listaArticulos;
+            }
+
+
+            dgbArticulos.DataSource = null;
+            dgbArticulos.DataSource = listaFiltrada;
+            dgbArticulos.Columns["Codigo"].Visible = false;
         }
     }
 }
