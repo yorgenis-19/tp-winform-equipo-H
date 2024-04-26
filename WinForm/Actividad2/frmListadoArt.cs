@@ -45,7 +45,7 @@ namespace Actividad2
           cargarImagen(seleccionado.imagen.url);
         }
 
-        private void cargarImagen(string imagen)
+        public void cargarImagen(string imagen)
         {
             try
             {
@@ -160,5 +160,18 @@ namespace Actividad2
             dgbArticulos.DataSource = listaFiltrada;
             dgbArticulos.Columns["Codigo"].Visible = false;
         }
+
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            Articulo seleccionado;
+            seleccionado = (Articulo)dgbArticulos.CurrentRow.DataBoundItem;
+            Modificar modificar = new Modificar();
+            modificar.ShowDialog();
+            cargar();
+
+        }
+
+
     }
 }

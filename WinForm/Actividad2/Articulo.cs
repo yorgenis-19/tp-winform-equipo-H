@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Actividad2
 {
-    internal class Articulo
+    public class Articulo
     { 
         public int id { get; set; }
         public string codigo { get; set; }

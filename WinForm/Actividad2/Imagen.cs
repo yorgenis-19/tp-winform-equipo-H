@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Actividad2
 {
-    internal class Imagen
+    public class Imagen
     {
         public  string url { get; set; }
         public int id { get; set; }

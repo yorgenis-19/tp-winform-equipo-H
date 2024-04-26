@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Actividad2
 {
-    internal class Categoria
+    public class Categoria
     {
         public int Id { get; set; }
         public string Descripcion { get; set; }

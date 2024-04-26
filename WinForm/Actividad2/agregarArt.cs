@@ -6,23 +6,26 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
+using System.Windows.Forms; 
 
 namespace Actividad2
 {
     public partial class agregarArt : Form
     {
+        private Articulo articulo = null; 
+
         public agregarArt()
         {
             InitializeComponent();
         }
+      
 
         private void label2_Click(object sender, EventArgs e)
         {
 
         }
 
-        private bool validateFields()
+       /* private bool validateFields()
         {
             if (txtCodigo.Text.Length == 0)
             {
@@ -43,17 +46,17 @@ namespace Actividad2
             {
                 return false;
             }
-            if (!ValidarCategoria())
+          /*  if (!ValidarCategoria())
             {
                 return false;
-            }
-            if (yaExiste())
+            }*/
+          /*  if (yaExiste())
             {
                 MessageBox.Show("Ya existe un Articulo con ese codigo");
                 return false;
             }
             return true;
-        }
+        }*/
 
         private bool ValidarMarca()
         {
@@ -105,10 +108,10 @@ namespace Actividad2
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            if (!validateFields())
+           /* if (!validateFields())
             {
                 return;
-            }
+            }*/
             MarcaDB marcaDB = new MarcaDB();
             CategoriaDB categoriaDB = new CategoriaDB();
 
@@ -149,6 +152,20 @@ namespace Actividad2
         private void label3_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void agregarArt_Load(object sender, EventArgs e)
+        {
+            frmListadoArt frmListadoArt = new frmListadoArt(); // Lo voy a utilizar para cargar Imagen
+
+            if(articulo != null)
+            {
+                txtNombre.Text = articulo.nombre;
+                txtDescripcion.Text = articulo.descripcion;
+                txtbMarca.Text = articulo.Marca.ToString();
+                txtCodigo.Text = articulo.codigo;
+                           
+            }
         }
     }
 }

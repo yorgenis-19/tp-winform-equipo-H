@@ -19,8 +19,8 @@ namespace Actividad2
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Menu menu = new Menu();
-            menu.Show(this);
+            frmListadoArt frmListadoArt = new frmListadoArt();
+            frmListadoArt.ShowDialog();
         }
     }
 }
