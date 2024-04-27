@@ -135,25 +135,43 @@ namespace Actividad2
 
             string filtroMarca = txtFiltroMarc.Text;
             string filtroCategoria = txtFiltroCat.Text;
+       
 
-            if (filtroMarca != "" || filtroCategoria != "")
+            if (filtroMarca != "" && filtroCategoria != "" && txtPrecio.Text != "")
             {
 
-                listaFiltrada = listaArticulos.FindAll(x => x.Marca.ToString() == filtroMarca || x.Categoria.ToString() == filtroCategoria);
+                listaFiltrada = listaArticulos.FindAll(x => x.Marca.ToString() == filtroMarca && x.Categoria.ToString() == filtroCategoria && x.precio <= decimal.Parse(txtPrecio.Text));
             }
 
-            else if (filtroMarca != "")
+            else if (filtroMarca != "" && filtroCategoria != "")
               {
-                    listaFiltrada = listaArticulos.FindAll(x => x.Marca.ToString() == filtroMarca);
+                    listaFiltrada = listaArticulos.FindAll(x => x.Marca.ToString() == filtroMarca && x.Categoria.ToString() == filtroCategoria);
               }
-              else if (filtroCategoria != ""){
-                        listaFiltrada = listaArticulos.FindAll(x => x.Categoria.ToString() == filtroCategoria);
+              else if (filtroMarca != "" && txtPrecio.Text != "")
+               {
+                        listaFiltrada = listaArticulos.FindAll(x => x.Marca.ToString() == filtroMarca && x.precio <= decimal.Parse(txtPrecio.Text));
                }
-                
-            else
-            {
-                listaFiltrada = listaArticulos;
-            }
+                else if(filtroCategoria != "" && txtPrecio.Text != "")
+                 {
+                       listaFiltrada = listaArticulos.FindAll(x => x.Categoria.ToString() == filtroCategoria && x.precio <= decimal.Parse(txtPrecio.Text));
+                 }
+                 else if(filtroMarca != "")
+                  {
+                     listaFiltrada = listaArticulos.FindAll(x => x.Marca.ToString() == filtroMarca);
+                  }
+                  else if(filtroCategoria != "")
+                   {
+                     listaFiltrada = listaArticulos.FindAll(x => x.Categoria.ToString() == filtroCategoria);
+                   }
+                   else if (txtPrecio.Text != "")
+                    {
+                    listaFiltrada = listaArticulos.FindAll(x => x.precio <= decimal.Parse(txtPrecio.Text));
+                    }
+            
+                  else
+                   {
+                   listaFiltrada = listaArticulos;
+                   }
 
 
             dgbArticulos.DataSource = null;
