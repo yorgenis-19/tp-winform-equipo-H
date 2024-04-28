@@ -172,8 +172,8 @@ namespace Actividad2
         }
 
         public Articulo obtener(string codigo)
-
         {
+            ///Metodo para optener un articulo mediante un Codigo de producto
             SqlConnection connection = new SqlConnection();
             SqlCommand cmd = new SqlCommand();
             SqlDataReader reader = null;
