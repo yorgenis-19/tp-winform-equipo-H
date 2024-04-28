@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -71,7 +72,7 @@ namespace Actividad2
 
         public void modificar(Articulo articulo)
         {
-               AccesoDatos accesoDatos = new AccesoDatos();
+            AccesoDatos accesoDatos = new AccesoDatos();
             try
             {
                 accesoDatos.setearConsulta("update ARTICULOS set Codigo = @codigo, Nombre = @nombre, Descripcion = @descripcion, IdMarca = @idMarca, IdCategoria = @IdCategoria, Precio = @precio WHERE id = 1");
@@ -95,5 +96,66 @@ namespace Actividad2
             }
 
         }
+
+        public Articulo obtener(string codigo)
+
+        {
+            SqlConnection connection = new SqlConnection();
+            SqlCommand cmd = new SqlCommand();
+            SqlDataReader reader = null;
+            MarcaDB marcaDB = new MarcaDB();
+            CategoriaDB categoriaDB = new CategoriaDB();
+
+            try
+            {
+                connection.ConnectionString = "server=.\\SQLEXPRESS; database=CATALOGO_P3_DB; integrated security=true";
+                cmd.CommandType = System.Data.CommandType.Text;
+                cmd.CommandText = "SELECT * FROM ARTICULOS WHERE Codigo = @Codigo";
+                cmd.Parameters.AddWithValue("@Codigo", codigo);
+                cmd.Connection = connection;
+
+                connection.Open();
+                reader = cmd.ExecuteReader();
+                Articulo articulo;
+                if (reader.Read())
+                {
+                    articulo = new Articulo();
+                    articulo.id = (int)reader["Id"];
+                    articulo.codigo = (string)reader["Codigo"];
+                    articulo.nombre = (string)reader["Nombre"];
+                    articulo.descripcion = (string)reader["Descripcion"];
+                    int idMarca = (int)reader["IdMarca"];
+                    articulo.Marca = new Marca();
+                    articulo.Marca.Descripcion = marcaDB.obtener(idMarca);
+                    int idCategoria = (int)reader["IdCategoria"];
+                    articulo.Categoria = new Categoria();
+                    articulo.Categoria.Descripcion = categoriaDB.obtener(idCategoria);
+                    articulo.precio = (decimal)reader["Precio"];
+
+                    return articulo;
+                }
+                else
+                {
+                    //MessageBox.Show("Articulo no encontrado");
+                    return articulo = null;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+            finally
+            {
+                if (reader != null)
+                {
+                    reader.Close();
+                }
+
+                connection.Close();
+
+            }
+        }
     }
 }
+

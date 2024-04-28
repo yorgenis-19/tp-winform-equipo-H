@@ -10,6 +10,7 @@ namespace Actividad2
     {
         public  string url { get; set; }
         public int id { get; set; }
+        public int idArticulo { get; set; }
 
         public override string ToString()
         {

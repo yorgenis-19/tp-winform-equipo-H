@@ -39,11 +39,12 @@
             this.label3 = new System.Windows.Forms.Label();
             this.nupdPrecio = new System.Windows.Forms.NumericUpDown();
             this.label4 = new System.Windows.Forms.Label();
-            this.nCategoria = new System.Windows.Forms.NumericUpDown();
             this.lblCategoria = new System.Windows.Forms.Label();
             this.cmbMarca = new System.Windows.Forms.ComboBox();
+            this.cmbCategoria = new System.Windows.Forms.ComboBox();
+            this.lblImagen = new System.Windows.Forms.Label();
+            this.txtImagen = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.nupdPrecio)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nCategoria)).BeginInit();
             this.SuspendLayout();
             // 
             // lbBucar
@@ -86,7 +87,7 @@
             // txtNombre
             // 
             this.txtNombre.Location = new System.Drawing.Point(225, 15);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(132, 22);
             this.txtNombre.TabIndex = 12;
@@ -94,7 +95,7 @@
             // txtCodigo
             // 
             this.txtCodigo.Location = new System.Drawing.Point(225, 74);
-            this.txtCodigo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCodigo.Margin = new System.Windows.Forms.Padding(4);
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(132, 22);
             this.txtCodigo.TabIndex = 13;
@@ -102,8 +103,8 @@
             // 
             // txtDescripcion
             // 
-            this.txtDescripcion.Location = new System.Drawing.Point(225, 134);
-            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDescripcion.Location = new System.Drawing.Point(225, 139);
+            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(4);
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(132, 22);
             this.txtDescripcion.TabIndex = 14;
@@ -115,8 +116,8 @@
             this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgregar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregar.ForeColor = System.Drawing.Color.White;
-            this.btnAgregar.Location = new System.Drawing.Point(93, 409);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAgregar.Location = new System.Drawing.Point(94, 419);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(109, 34);
             this.btnAgregar.TabIndex = 15;
@@ -132,8 +133,8 @@
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.ForeColor = System.Drawing.Color.White;
-            this.btnCancelar.Location = new System.Drawing.Point(325, 409);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCancelar.Location = new System.Drawing.Point(327, 419);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(109, 34);
             this.btnCancelar.TabIndex = 16;
@@ -158,7 +159,7 @@
             // nupdPrecio
             // 
             this.nupdPrecio.Location = new System.Drawing.Point(225, 192);
-            this.nupdPrecio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.nupdPrecio.Margin = new System.Windows.Forms.Padding(4);
             this.nupdPrecio.Name = "nupdPrecio";
             this.nupdPrecio.Size = new System.Drawing.Size(133, 22);
             this.nupdPrecio.TabIndex = 19;
@@ -174,14 +175,6 @@
             this.label4.Size = new System.Drawing.Size(67, 21);
             this.label4.TabIndex = 20;
             this.label4.Text = "Marca";
-            // 
-            // nCategoria
-            // 
-            this.nCategoria.Location = new System.Drawing.Point(225, 319);
-            this.nCategoria.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.nCategoria.Name = "nCategoria";
-            this.nCategoria.Size = new System.Drawing.Size(133, 22);
-            this.nCategoria.TabIndex = 23;
             // 
             // lblCategoria
             // 
@@ -203,14 +196,45 @@
             this.cmbMarca.Size = new System.Drawing.Size(133, 24);
             this.cmbMarca.TabIndex = 24;
             // 
+            // cmbCategoria
+            // 
+            this.cmbCategoria.FormattingEnabled = true;
+            this.cmbCategoria.Location = new System.Drawing.Point(225, 316);
+            this.cmbCategoria.Name = "cmbCategoria";
+            this.cmbCategoria.Size = new System.Drawing.Size(133, 24);
+            this.cmbCategoria.TabIndex = 25;
+            this.cmbCategoria.SelectedIndexChanged += new System.EventHandler(this.cmbCategoria_SelectedIndexChanged);
+            // 
+            // lblImagen
+            // 
+            this.lblImagen.AutoSize = true;
+            this.lblImagen.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblImagen.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblImagen.Location = new System.Drawing.Point(90, 367);
+            this.lblImagen.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblImagen.Name = "lblImagen";
+            this.lblImagen.Size = new System.Drawing.Size(136, 26);
+            this.lblImagen.TabIndex = 26;
+            this.lblImagen.Text = "URL Imagen";
+            // 
+            // txtImagen
+            // 
+            this.txtImagen.Location = new System.Drawing.Point(225, 366);
+            this.txtImagen.Margin = new System.Windows.Forms.Padding(4);
+            this.txtImagen.Name = "txtImagen";
+            this.txtImagen.Size = new System.Drawing.Size(132, 22);
+            this.txtImagen.TabIndex = 27;
+            // 
             // agregarArt
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
-            this.ClientSize = new System.Drawing.Size(553, 458);
+            this.ClientSize = new System.Drawing.Size(564, 478);
+            this.Controls.Add(this.txtImagen);
+            this.Controls.Add(this.lblImagen);
+            this.Controls.Add(this.cmbCategoria);
             this.Controls.Add(this.cmbMarca);
-            this.Controls.Add(this.nCategoria);
             this.Controls.Add(this.lblCategoria);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.nupdPrecio);
@@ -223,12 +247,11 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lbBucar);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "agregarArt";
             this.Text = "agregarArt";
             this.Load += new System.EventHandler(this.agregarArt_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nupdPrecio)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nCategoria)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -247,8 +270,10 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.NumericUpDown nupdPrecio;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.NumericUpDown nCategoria;
         private System.Windows.Forms.Label lblCategoria;
         private System.Windows.Forms.ComboBox cmbMarca;
+        private System.Windows.Forms.ComboBox cmbCategoria;
+        private System.Windows.Forms.Label lblImagen;
+        private System.Windows.Forms.TextBox txtImagen;
     }
 }

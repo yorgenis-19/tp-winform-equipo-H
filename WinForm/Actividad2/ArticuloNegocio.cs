@@ -17,13 +17,15 @@ namespace Actividad2
             SqlConnection conexion = new SqlConnection();
             SqlCommand comando = new SqlCommand();
             SqlDataReader lector;
+            MarcaDB marcadb = new MarcaDB();
+            CategoriaDB categoriaDB = new CategoriaDB();
 
 
             try
             {
                 conexion.ConnectionString = "server=.\\SQLEXPRESS; database=CATALOGO_P3_DB; integrated security=true";
                 comando.CommandType = System.Data.CommandType.Text;
-                comando.CommandText = "select A.Id, Codigo, Nombre, A.Descripcion,Precio, M.Descripcion as Marca,C.Descripcion as Categoria,ImagenUrl FROM ARTICULOS A, MARCAS M, CATEGORIAS C,IMAGENES I where A.id = M.Id and A.Id = C.Id and A.Id = I.IdArticulo";                     
+                comando.CommandText = "SELECT A.Id, A.Codigo, A.Nombre, A.Descripcion, A.Precio, M.Descripcion AS DescripcionMarca, M.Id AS IdMarca,C.Id as IdCategoria, C.Descripcion AS DescripcionCategoria, I.ImagenUrl\r\nFROM ARTICULOS A\r\nLEFT JOIN MARCAS M ON A.IdMarca = M.Id\r\nLEFT JOIN CATEGORIAS C ON A.IdCategoria = C.Id\r\nLEFT JOIN IMAGENES I ON A.Id = I.IdArticulo;";                     
                 comando.Connection = conexion;  
 
                 conexion.Open();
@@ -40,9 +42,11 @@ namespace Actividad2
                     aux.imagen = new Imagen();
                     aux.imagen.url = (string)lector["ImagenUrl"];
                     aux.Marca = new Marca();
-                    aux.Marca.Descripcion = (string)lector["Marca"];
+                    int idMarca = (int)lector["IdMarca"];
+                    aux.Marca.Descripcion = marcadb.obtener(idMarca);
+                    int idCategoria = (int)lector["IdCategoria"];
                     aux.Categoria = new Categoria();
-                    aux.Categoria.Descripcion = (string)lector["Categoria"];
+                    aux.Categoria.Descripcion = categoriaDB.obtener(idCategoria);
 
                     lista.Add(aux);
                 }

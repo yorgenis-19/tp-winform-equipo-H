@@ -72,6 +72,7 @@
       <DependentUpon>frmUsuario.cs</DependentUpon>
     </Compile>
     <Compile Include="Imagen.cs" />
+    <Compile Include="ImagenDB.cs" />
     <Compile Include="Marca.cs" />
     <Compile Include="MarcaDB.cs" />
     <Compile Include="Modificar.cs">

@@ -82,7 +82,7 @@ namespace Actividad2
             listaCategoria = categoriaDB.listar();
             foreach (var categoria in listaCategoria)
             {
-                if (categoria.Descripcion == nCategoria.Text)
+                if (categoria.Descripcion == cmbCategoria.Text)
                 {
                     return true;
                 }
@@ -124,18 +124,30 @@ namespace Actividad2
             articulo.Marca.Descripcion = cmbMarca.Text;
             articulo.Marca.Id = marcaDB.obtener(articulo.Marca.Descripcion);
             articulo.Categoria = new Categoria();
-            articulo.Categoria.Descripcion = nCategoria.Text;
+            articulo.Categoria.Descripcion = cmbCategoria.Text;
             articulo.Categoria.Id = categoriaDB.obtener(articulo.Categoria.Descripcion);
             articulo.precio = nupdPrecio.Value;
 
             articuloDB.agregar(articulo);
+
+            Articulo getId = new Articulo();
+            getId = articuloDB.obtener(txtCodigo.Text);
+
+            ImagenDB imagenDB = new ImagenDB();
+
+              Imagen imagen = new Imagen();
+              imagen.idArticulo = getId.id;
+              imagen.url = txtImagen.Text;
+              imagenDB.agregar(imagen);
+           
+
 
             MessageBox.Show("Articulo agregado exitosamente");
             txtCodigo.Text = "";
             txtNombre.Text = "";
             txtDescripcion.Text = "";
             cmbMarca.Text = "";
-            nCategoria.Text = "";
+            cmbCategoria.Text = "";
             nupdPrecio.Value = 0;
         }
 
@@ -169,6 +181,17 @@ namespace Actividad2
 
             }
 
+            cmbCategoria.Items.Clear();
+            CategoriaDB categoriaDB = new CategoriaDB();
+            List<Categoria> listaCategoria = new List<Categoria>();
+            listaCategoria = categoriaDB.listar();
+
+            foreach (var categoria in listaCategoria)
+            {
+                cmbCategoria.Items.Add(categoria.Descripcion);
+
+            }
+
 
             if(articulo != null)
             {
@@ -178,6 +201,11 @@ namespace Actividad2
                 txtCodigo.Text = articulo.codigo;
                            
             }
+        }
+
+        private void cmbCategoria_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
