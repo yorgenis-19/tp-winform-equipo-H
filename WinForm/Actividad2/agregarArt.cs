@@ -66,7 +66,7 @@ namespace Actividad2
 
             foreach (var marca in listaMarca)
             {
-                if (marca.Descripcion == txtbMarca.Text)
+                if (marca.Descripcion == cmbMarca.Text)
                 {
                     return true;
                 }
@@ -121,7 +121,7 @@ namespace Actividad2
             articulo.nombre = txtNombre.Text;
             articulo.descripcion = txtDescripcion.Text;
             articulo.Marca = new Marca();
-            articulo.Marca.Descripcion = txtbMarca.Text;
+            articulo.Marca.Descripcion = cmbMarca.Text;
             articulo.Marca.Id = marcaDB.obtener(articulo.Marca.Descripcion);
             articulo.Categoria = new Categoria();
             articulo.Categoria.Descripcion = nCategoria.Text;
@@ -134,7 +134,7 @@ namespace Actividad2
             txtCodigo.Text = "";
             txtNombre.Text = "";
             txtDescripcion.Text = "";
-            txtbMarca.Text = "";
+            cmbMarca.Text = "";
             nCategoria.Text = "";
             nupdPrecio.Value = 0;
         }
@@ -158,11 +158,23 @@ namespace Actividad2
         {
             frmListadoArt frmListadoArt = new frmListadoArt(); // Lo voy a utilizar para cargar Imagen
 
+            cmbMarca.Items.Clear();
+            MarcaDB marcaDB = new MarcaDB();
+            List<Marca> listaMarca = new List<Marca>();
+            listaMarca = marcaDB.listar();
+
+            foreach (var marca in listaMarca) 
+            {
+                cmbMarca.Items.Add(marca.Descripcion);
+
+            }
+
+
             if(articulo != null)
             {
                 txtNombre.Text = articulo.nombre;
                 txtDescripcion.Text = articulo.descripcion;
-                txtbMarca.Text = articulo.Marca.ToString();
+                cmbMarca.Text = articulo.Marca.ToString();
                 txtCodigo.Text = articulo.codigo;
                            
             }
