@@ -156,15 +156,7 @@ namespace Actividad2
             Close();
         }
 
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
+     
 
         private void agregarArt_Load(object sender, EventArgs e)
         {
@@ -198,8 +190,26 @@ namespace Actividad2
                 txtNombre.Text = articulo.nombre;
                 txtDescripcion.Text = articulo.descripcion;
                 cmbMarca.Text = articulo.Marca.ToString();
+
+                cmbCategoria.Text = articulo.Categoria.ToString();   
+
+
                 txtCodigo.Text = articulo.codigo;
                            
+            }
+
+            MarcaDB mar = new MarcaDB();
+            CategoriaDB cat = new CategoriaDB();    
+
+            try
+            {
+                cmbMarca.DataSource = mar.listar();
+                cmbCategoria.DataSource = cat.listar(); 
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
             }
         }
 
@@ -207,5 +217,12 @@ namespace Actividad2
         {
 
         }
+        private void btnAgrMC_Click(object sender, EventArgs e)
+        {
+            agregarMarca_categoria aux = new agregarMarca_categoria();
+            aux.ShowDialog();   
+        }
+
+
     }
 }

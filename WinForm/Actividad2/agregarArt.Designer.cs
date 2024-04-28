@@ -44,6 +44,7 @@
             this.cmbCategoria = new System.Windows.Forms.ComboBox();
             this.lblImagen = new System.Windows.Forms.Label();
             this.txtImagen = new System.Windows.Forms.TextBox();
+            this.btnAgrMC = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.nupdPrecio)).BeginInit();
             this.SuspendLayout();
             // 
@@ -52,10 +53,9 @@
             this.lbBucar.AutoSize = true;
             this.lbBucar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbBucar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lbBucar.Location = new System.Drawing.Point(101, 16);
-            this.lbBucar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbBucar.Location = new System.Drawing.Point(76, 13);
             this.lbBucar.Name = "lbBucar";
-            this.lbBucar.Size = new System.Drawing.Size(77, 21);
+            this.lbBucar.Size = new System.Drawing.Size(61, 17);
             this.lbBucar.TabIndex = 9;
             this.lbBucar.Text = "Nombre";
             // 
@@ -64,10 +64,9 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(101, 74);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(76, 60);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(72, 21);
+            this.label1.Size = new System.Drawing.Size(58, 17);
             this.label1.TabIndex = 10;
             this.label1.Text = "Codigo";
             // 
@@ -76,10 +75,9 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(101, 138);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(76, 112);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(107, 21);
+            this.label2.Size = new System.Drawing.Size(83, 17);
             this.label2.TabIndex = 11;
             this.label2.Text = "Descripcion";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -88,8 +86,9 @@
             // 
             this.txtNombre.Location = new System.Drawing.Point(225, 15);
             this.txtNombre.Margin = new System.Windows.Forms.Padding(4);
+            this.txtNombre.Location = new System.Drawing.Point(169, 12);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(132, 22);
+            this.txtNombre.Size = new System.Drawing.Size(100, 20);
             this.txtNombre.TabIndex = 12;
             // 
             // txtCodigo
@@ -97,16 +96,15 @@
             this.txtCodigo.Location = new System.Drawing.Point(225, 74);
             this.txtCodigo.Margin = new System.Windows.Forms.Padding(4);
             this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(132, 22);
+            this.txtCodigo.Size = new System.Drawing.Size(100, 20);
             this.txtCodigo.TabIndex = 13;
-            this.txtCodigo.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // txtDescripcion
             // 
             this.txtDescripcion.Location = new System.Drawing.Point(225, 139);
             this.txtDescripcion.Margin = new System.Windows.Forms.Padding(4);
             this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(132, 22);
+            this.txtDescripcion.Size = new System.Drawing.Size(100, 20);
             this.txtDescripcion.TabIndex = 14;
             // 
             // btnAgregar
@@ -119,9 +117,9 @@
             this.btnAgregar.Location = new System.Drawing.Point(94, 419);
             this.btnAgregar.Margin = new System.Windows.Forms.Padding(4);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(109, 34);
+            this.btnAgregar.Size = new System.Drawing.Size(168, 34);
             this.btnAgregar.TabIndex = 15;
-            this.btnAgregar.Text = "Agregar";
+            this.btnAgregar.Text = "Agregar articulo";
             this.btnAgregar.UseCompatibleTextRendering = true;
             this.btnAgregar.UseVisualStyleBackColor = true;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
@@ -136,7 +134,7 @@
             this.btnCancelar.Location = new System.Drawing.Point(327, 419);
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(109, 34);
+            this.btnCancelar.Size = new System.Drawing.Size(82, 28);
             this.btnCancelar.TabIndex = 16;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseCompatibleTextRendering = true;
@@ -148,20 +146,18 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(101, 192);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(76, 156);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(61, 21);
+            this.label3.Size = new System.Drawing.Size(48, 17);
             this.label3.TabIndex = 17;
             this.label3.Text = "Precio";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // nupdPrecio
             // 
             this.nupdPrecio.Location = new System.Drawing.Point(225, 192);
             this.nupdPrecio.Margin = new System.Windows.Forms.Padding(4);
             this.nupdPrecio.Name = "nupdPrecio";
-            this.nupdPrecio.Size = new System.Drawing.Size(133, 22);
+            this.nupdPrecio.Size = new System.Drawing.Size(100, 20);
             this.nupdPrecio.TabIndex = 19;
             // 
             // label4
@@ -169,10 +165,9 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label4.Location = new System.Drawing.Point(101, 255);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(76, 207);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(67, 21);
+            this.label4.Size = new System.Drawing.Size(49, 17);
             this.label4.TabIndex = 20;
             this.label4.Text = "Marca";
             // 
@@ -181,20 +176,46 @@
             this.lblCategoria.AutoSize = true;
             this.lblCategoria.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCategoria.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblCategoria.Location = new System.Drawing.Point(101, 319);
-            this.lblCategoria.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCategoria.Location = new System.Drawing.Point(76, 259);
             this.lblCategoria.Name = "lblCategoria";
-            this.lblCategoria.Size = new System.Drawing.Size(96, 21);
+            this.lblCategoria.Size = new System.Drawing.Size(75, 17);
             this.lblCategoria.TabIndex = 22;
             this.lblCategoria.Text = "Categoria";
             // 
             // cmbMarca
             // 
             this.cmbMarca.FormattingEnabled = true;
-            this.cmbMarca.Location = new System.Drawing.Point(225, 255);
+            this.cmbMarca.Location = new System.Drawing.Point(169, 207);
+            this.cmbMarca.Margin = new System.Windows.Forms.Padding(2);
             this.cmbMarca.Name = "cmbMarca";
-            this.cmbMarca.Size = new System.Drawing.Size(133, 24);
-            this.cmbMarca.TabIndex = 24;
+            this.cmbMarca.Size = new System.Drawing.Size(92, 21);
+            this.cmbMarca.TabIndex = 25;
+            // 
+            // cmbCategoria
+            // 
+            this.cmbCategoria.FormattingEnabled = true;
+            this.cmbCategoria.Location = new System.Drawing.Point(169, 258);
+            this.cmbCategoria.Margin = new System.Windows.Forms.Padding(2);
+            this.cmbCategoria.Name = "cmbCategoria";
+            this.cmbCategoria.Size = new System.Drawing.Size(92, 21);
+            this.cmbCategoria.TabIndex = 26;
+            // 
+            // btnAgrMC
+            // 
+            this.btnAgrMC.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnAgrMC.FlatAppearance.BorderColor = System.Drawing.SystemColors.Highlight;
+            this.btnAgrMC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgrMC.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgrMC.ForeColor = System.Drawing.Color.White;
+            this.btnAgrMC.Location = new System.Drawing.Point(256, 327);
+            this.btnAgrMC.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAgrMC.Name = "btnAgrMC";
+            this.btnAgrMC.Size = new System.Drawing.Size(208, 34);
+            this.btnAgrMC.TabIndex = 27;
+            this.btnAgrMC.Text = "Agregar marca/categoria";
+            this.btnAgrMC.UseCompatibleTextRendering = true;
+            this.btnAgrMC.UseVisualStyleBackColor = true;
+            this.btnAgrMC.Click += new System.EventHandler(this.btnAgrMC_Click);
             // 
             // cmbCategoria
             // 
@@ -227,7 +248,7 @@
             // 
             // agregarArt
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
             this.ClientSize = new System.Drawing.Size(564, 478);
@@ -273,7 +294,7 @@
         private System.Windows.Forms.Label lblCategoria;
         private System.Windows.Forms.ComboBox cmbMarca;
         private System.Windows.Forms.ComboBox cmbCategoria;
-        private System.Windows.Forms.Label lblImagen;
-        private System.Windows.Forms.TextBox txtImagen;
+        private System.Windows.Forms.Button btnAgrMC;
+
     }
 }
