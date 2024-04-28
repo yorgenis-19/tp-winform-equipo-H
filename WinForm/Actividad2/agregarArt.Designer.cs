@@ -108,9 +108,10 @@
             this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgregar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregar.ForeColor = System.Drawing.Color.White;
-            this.btnAgregar.Location = new System.Drawing.Point(12, 332);
+            this.btnAgregar.Location = new System.Drawing.Point(34, 327);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(156, 28);
+            this.btnAgregar.Size = new System.Drawing.Size(168, 34);
             this.btnAgregar.TabIndex = 15;
             this.btnAgregar.Text = "Agregar articulo";
             this.btnAgregar.UseCompatibleTextRendering = true;
@@ -124,7 +125,8 @@
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.ForeColor = System.Drawing.Color.White;
-            this.btnCancelar.Location = new System.Drawing.Point(331, 13);
+            this.btnCancelar.Location = new System.Drawing.Point(317, 13);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(82, 28);
             this.btnCancelar.TabIndex = 16;
@@ -177,16 +179,18 @@
             // 
             this.cmbMarca.FormattingEnabled = true;
             this.cmbMarca.Location = new System.Drawing.Point(169, 207);
+            this.cmbMarca.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cmbMarca.Name = "cmbMarca";
-            this.cmbMarca.Size = new System.Drawing.Size(121, 21);
+            this.cmbMarca.Size = new System.Drawing.Size(92, 21);
             this.cmbMarca.TabIndex = 25;
             // 
             // cmbCategoria
             // 
             this.cmbCategoria.FormattingEnabled = true;
-            this.cmbCategoria.Location = new System.Drawing.Point(169, 259);
+            this.cmbCategoria.Location = new System.Drawing.Point(169, 258);
+            this.cmbCategoria.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cmbCategoria.Name = "cmbCategoria";
-            this.cmbCategoria.Size = new System.Drawing.Size(121, 21);
+            this.cmbCategoria.Size = new System.Drawing.Size(92, 21);
             this.cmbCategoria.TabIndex = 26;
             // 
             // btnAgrMC
@@ -196,9 +200,10 @@
             this.btnAgrMC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgrMC.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgrMC.ForeColor = System.Drawing.Color.White;
-            this.btnAgrMC.Location = new System.Drawing.Point(212, 332);
+            this.btnAgrMC.Location = new System.Drawing.Point(256, 327);
+            this.btnAgrMC.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAgrMC.Name = "btnAgrMC";
-            this.btnAgrMC.Size = new System.Drawing.Size(191, 28);
+            this.btnAgrMC.Size = new System.Drawing.Size(208, 34);
             this.btnAgrMC.TabIndex = 27;
             this.btnAgrMC.Text = "Agregar marca/categoria";
             this.btnAgrMC.UseCompatibleTextRendering = true;
@@ -210,7 +215,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
-            this.ClientSize = new System.Drawing.Size(415, 372);
+            this.ClientSize = new System.Drawing.Size(562, 449);
             this.Controls.Add(this.btnAgrMC);
             this.Controls.Add(this.cmbCategoria);
             this.Controls.Add(this.cmbMarca);
@@ -252,5 +257,6 @@
         private System.Windows.Forms.ComboBox cmbMarca;
         private System.Windows.Forms.ComboBox cmbCategoria;
         private System.Windows.Forms.Button btnAgrMC;
+
     }
 }

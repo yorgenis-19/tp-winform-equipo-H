@@ -150,12 +150,27 @@ namespace Actividad2
         {
             frmListadoArt frmListadoArt = new frmListadoArt(); // Lo voy a utilizar para cargar Imagen
 
+            cmbMarca.Items.Clear();
+            MarcaDB marcaDB = new MarcaDB();
+            List<Marca> listaMarca = new List<Marca>();
+            listaMarca = marcaDB.listar();
+
+            foreach (var marca in listaMarca) 
+            {
+                cmbMarca.Items.Add(marca.Descripcion);
+
+            }
+
+
             if(articulo != null)
             {
                 txtNombre.Text = articulo.nombre;
                 txtDescripcion.Text = articulo.descripcion;
                 cmbMarca.Text = articulo.Marca.ToString();
+
                 cmbCategoria.Text = articulo.Categoria.ToString();   
+
+
                 txtCodigo.Text = articulo.codigo;
                            
             }
