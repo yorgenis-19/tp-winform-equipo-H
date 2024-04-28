@@ -54,11 +54,23 @@
     <Compile Include="agregarArt.Designer.cs">
       <DependentUpon>agregarArt.cs</DependentUpon>
     </Compile>
+    <Compile Include="agregarMarca_categoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="agregarMarca_categoria.Designer.cs">
+      <DependentUpon>agregarMarca_categoria.cs</DependentUpon>
+    </Compile>
     <Compile Include="Articulo.cs" />
     <Compile Include="ArticuloDB.cs" />
     <Compile Include="ArticuloNegocio.cs" />
     <Compile Include="Categoria.cs" />
     <Compile Include="CategoriaDB.cs" />
+    <Compile Include="EditarMrca_Articulo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditarMrca_Articulo.Designer.cs">
+      <DependentUpon>EditarMrca_Articulo.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmListadoArt.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,6 +96,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="agregarArt.resx">
       <DependentUpon>agregarArt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="agregarMarca_categoria.resx">
+      <DependentUpon>agregarMarca_categoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditarMrca_Articulo.resx">
+      <DependentUpon>EditarMrca_Articulo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmListadoArt.resx">
       <DependentUpon>frmListadoArt.cs</DependentUpon>

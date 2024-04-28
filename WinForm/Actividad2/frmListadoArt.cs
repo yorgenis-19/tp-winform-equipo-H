@@ -79,7 +79,7 @@ namespace Actividad2
 
             dgbArticulos.DataSource = null;
             dgbArticulos.DataSource = listaBusqueda;
-            dgbArticulos.Columns["Codigo"].Visible = false;
+            //dgbArticulos.Columns["Codigo"].Visible = false;
             
         }
 

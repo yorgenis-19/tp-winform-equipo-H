@@ -66,7 +66,7 @@ namespace Actividad2
 
             foreach (var marca in listaMarca)
             {
-                if (marca.Descripcion == txtbMarca.Text)
+                if (marca.Descripcion == cmbMarca.Text)
                 {
                     return true;
                 }
@@ -82,7 +82,7 @@ namespace Actividad2
             listaCategoria = categoriaDB.listar();
             foreach (var categoria in listaCategoria)
             {
-                if (categoria.Descripcion == nCategoria.Text)
+                if (categoria.Descripcion == cmbCategoria.Text)
                 {
                     return true;
                 }
@@ -121,10 +121,10 @@ namespace Actividad2
             articulo.nombre = txtNombre.Text;
             articulo.descripcion = txtDescripcion.Text;
             articulo.Marca = new Marca();
-            articulo.Marca.Descripcion = txtbMarca.Text;
+            articulo.Marca.Descripcion = cmbMarca.Text;
             articulo.Marca.Id = marcaDB.obtener(articulo.Marca.Descripcion);
             articulo.Categoria = new Categoria();
-            articulo.Categoria.Descripcion = nCategoria.Text;
+            articulo.Categoria.Descripcion = cmbCategoria.Text;
             articulo.Categoria.Id = categoriaDB.obtener(articulo.Categoria.Descripcion);
             articulo.precio = nupdPrecio.Value;
 
@@ -134,8 +134,8 @@ namespace Actividad2
             txtCodigo.Text = "";
             txtNombre.Text = "";
             txtDescripcion.Text = "";
-            txtbMarca.Text = "";
-            nCategoria.Text = "";
+            cmbMarca.Text = "";
+            cmbCategoria.Text = "";
             nupdPrecio.Value = 0;
         }
 
@@ -144,15 +144,7 @@ namespace Actividad2
             Close();
         }
 
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
+     
 
         private void agregarArt_Load(object sender, EventArgs e)
         {
@@ -162,10 +154,31 @@ namespace Actividad2
             {
                 txtNombre.Text = articulo.nombre;
                 txtDescripcion.Text = articulo.descripcion;
-                txtbMarca.Text = articulo.Marca.ToString();
+                cmbMarca.Text = articulo.Marca.ToString();
+                cmbCategoria.Text = articulo.Categoria.ToString();   
                 txtCodigo.Text = articulo.codigo;
                            
             }
+
+            MarcaDB mar = new MarcaDB();
+            CategoriaDB cat = new CategoriaDB();    
+
+            try
+            {
+                cmbMarca.DataSource = mar.listar();
+                cmbCategoria.DataSource = cat.listar(); 
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+        private void btnAgrMC_Click(object sender, EventArgs e)
+        {
+            agregarMarca_categoria aux = new agregarMarca_categoria();
+            aux.ShowDialog();   
         }
     }
 }

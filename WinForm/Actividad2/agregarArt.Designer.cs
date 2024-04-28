@@ -39,11 +39,11 @@
             this.label3 = new System.Windows.Forms.Label();
             this.nupdPrecio = new System.Windows.Forms.NumericUpDown();
             this.label4 = new System.Windows.Forms.Label();
-            this.nCategoria = new System.Windows.Forms.NumericUpDown();
             this.lblCategoria = new System.Windows.Forms.Label();
-            this.txtbMarca = new System.Windows.Forms.TextBox();
+            this.cmbMarca = new System.Windows.Forms.ComboBox();
+            this.cmbCategoria = new System.Windows.Forms.ComboBox();
+            this.btnAgrMC = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.nupdPrecio)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nCategoria)).BeginInit();
             this.SuspendLayout();
             // 
             // lbBucar
@@ -93,7 +93,6 @@
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(100, 20);
             this.txtCodigo.TabIndex = 13;
-            this.txtCodigo.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // txtDescripcion
             // 
@@ -109,11 +108,11 @@
             this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgregar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregar.ForeColor = System.Drawing.Color.White;
-            this.btnAgregar.Location = new System.Drawing.Point(70, 332);
+            this.btnAgregar.Location = new System.Drawing.Point(12, 332);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(82, 28);
+            this.btnAgregar.Size = new System.Drawing.Size(156, 28);
             this.btnAgregar.TabIndex = 15;
-            this.btnAgregar.Text = "Agregar";
+            this.btnAgregar.Text = "Agregar articulo";
             this.btnAgregar.UseCompatibleTextRendering = true;
             this.btnAgregar.UseVisualStyleBackColor = true;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
@@ -125,7 +124,7 @@
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.ForeColor = System.Drawing.Color.White;
-            this.btnCancelar.Location = new System.Drawing.Point(244, 332);
+            this.btnCancelar.Location = new System.Drawing.Point(331, 13);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(82, 28);
             this.btnCancelar.TabIndex = 16;
@@ -144,7 +143,6 @@
             this.label3.Size = new System.Drawing.Size(48, 17);
             this.label3.TabIndex = 17;
             this.label3.Text = "Precio";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // nupdPrecio
             // 
@@ -164,13 +162,6 @@
             this.label4.TabIndex = 20;
             this.label4.Text = "Marca";
             // 
-            // nCategoria
-            // 
-            this.nCategoria.Location = new System.Drawing.Point(169, 259);
-            this.nCategoria.Name = "nCategoria";
-            this.nCategoria.Size = new System.Drawing.Size(100, 20);
-            this.nCategoria.TabIndex = 23;
-            // 
             // lblCategoria
             // 
             this.lblCategoria.AutoSize = true;
@@ -182,12 +173,37 @@
             this.lblCategoria.TabIndex = 22;
             this.lblCategoria.Text = "Categoria";
             // 
-            // txtbMarca
+            // cmbMarca
             // 
-            this.txtbMarca.Location = new System.Drawing.Point(169, 204);
-            this.txtbMarca.Name = "txtbMarca";
-            this.txtbMarca.Size = new System.Drawing.Size(100, 20);
-            this.txtbMarca.TabIndex = 24;
+            this.cmbMarca.FormattingEnabled = true;
+            this.cmbMarca.Location = new System.Drawing.Point(169, 207);
+            this.cmbMarca.Name = "cmbMarca";
+            this.cmbMarca.Size = new System.Drawing.Size(121, 21);
+            this.cmbMarca.TabIndex = 25;
+            // 
+            // cmbCategoria
+            // 
+            this.cmbCategoria.FormattingEnabled = true;
+            this.cmbCategoria.Location = new System.Drawing.Point(169, 259);
+            this.cmbCategoria.Name = "cmbCategoria";
+            this.cmbCategoria.Size = new System.Drawing.Size(121, 21);
+            this.cmbCategoria.TabIndex = 26;
+            // 
+            // btnAgrMC
+            // 
+            this.btnAgrMC.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnAgrMC.FlatAppearance.BorderColor = System.Drawing.SystemColors.Highlight;
+            this.btnAgrMC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgrMC.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgrMC.ForeColor = System.Drawing.Color.White;
+            this.btnAgrMC.Location = new System.Drawing.Point(212, 332);
+            this.btnAgrMC.Name = "btnAgrMC";
+            this.btnAgrMC.Size = new System.Drawing.Size(191, 28);
+            this.btnAgrMC.TabIndex = 27;
+            this.btnAgrMC.Text = "Agregar marca/categoria";
+            this.btnAgrMC.UseCompatibleTextRendering = true;
+            this.btnAgrMC.UseVisualStyleBackColor = true;
+            this.btnAgrMC.Click += new System.EventHandler(this.btnAgrMC_Click);
             // 
             // agregarArt
             // 
@@ -195,8 +211,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
             this.ClientSize = new System.Drawing.Size(415, 372);
-            this.Controls.Add(this.txtbMarca);
-            this.Controls.Add(this.nCategoria);
+            this.Controls.Add(this.btnAgrMC);
+            this.Controls.Add(this.cmbCategoria);
+            this.Controls.Add(this.cmbMarca);
             this.Controls.Add(this.lblCategoria);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.nupdPrecio);
@@ -213,7 +230,6 @@
             this.Text = "agregarArt";
             this.Load += new System.EventHandler(this.agregarArt_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nupdPrecio)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nCategoria)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -232,8 +248,9 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.NumericUpDown nupdPrecio;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.NumericUpDown nCategoria;
         private System.Windows.Forms.Label lblCategoria;
-        private System.Windows.Forms.TextBox txtbMarca;
+        private System.Windows.Forms.ComboBox cmbMarca;
+        private System.Windows.Forms.ComboBox cmbCategoria;
+        private System.Windows.Forms.Button btnAgrMC;
     }
 }
