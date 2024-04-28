@@ -109,7 +109,7 @@
             this.btnAgregar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregar.ForeColor = System.Drawing.Color.White;
             this.btnAgregar.Location = new System.Drawing.Point(34, 327);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(2);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(168, 34);
             this.btnAgregar.TabIndex = 15;
@@ -126,7 +126,7 @@
             this.btnCancelar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.ForeColor = System.Drawing.Color.White;
             this.btnCancelar.Location = new System.Drawing.Point(317, 13);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(82, 28);
             this.btnCancelar.TabIndex = 16;
@@ -179,7 +179,7 @@
             // 
             this.cmbMarca.FormattingEnabled = true;
             this.cmbMarca.Location = new System.Drawing.Point(169, 207);
-            this.cmbMarca.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbMarca.Margin = new System.Windows.Forms.Padding(2);
             this.cmbMarca.Name = "cmbMarca";
             this.cmbMarca.Size = new System.Drawing.Size(92, 21);
             this.cmbMarca.TabIndex = 25;
@@ -188,7 +188,7 @@
             // 
             this.cmbCategoria.FormattingEnabled = true;
             this.cmbCategoria.Location = new System.Drawing.Point(169, 258);
-            this.cmbCategoria.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbCategoria.Margin = new System.Windows.Forms.Padding(2);
             this.cmbCategoria.Name = "cmbCategoria";
             this.cmbCategoria.Size = new System.Drawing.Size(92, 21);
             this.cmbCategoria.TabIndex = 26;
@@ -201,7 +201,7 @@
             this.btnAgrMC.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgrMC.ForeColor = System.Drawing.Color.White;
             this.btnAgrMC.Location = new System.Drawing.Point(256, 327);
-            this.btnAgrMC.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAgrMC.Margin = new System.Windows.Forms.Padding(2);
             this.btnAgrMC.Name = "btnAgrMC";
             this.btnAgrMC.Size = new System.Drawing.Size(208, 34);
             this.btnAgrMC.TabIndex = 27;

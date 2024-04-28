@@ -12,6 +12,9 @@ namespace Actividad2
 {
     public partial class Modificar : Form
     {
+
+        Articulo articulo = null;
+
         public Modificar()
         {
             InitializeComponent();
@@ -34,10 +37,10 @@ namespace Actividad2
                 articulo.codigo = txtCodigo.Text;
                 articulo.descripcion = txtDescripcion.Text;
                 articulo.Marca = new Marca();
-                articulo.Marca.Descripcion = txtbMarca.Text;
+                articulo.Marca.Descripcion = cmbMarca.Text;
                 articulo.Marca.Id = marcaDB.obtener(articulo.Marca.Descripcion);
                 articulo.Categoria = new Categoria();
-                articulo.Categoria.Descripcion = nCategoria.Text;
+                articulo.Categoria.Descripcion = cmbCategoria.Text;
                 articulo.Categoria.Id = categoriaDB.obtener(articulo.Categoria.Descripcion);
 
                 articuloDB.modificar(articulo);
@@ -55,5 +58,50 @@ namespace Actividad2
             }
         }
 
+        private void Modificar_Load(object sender, EventArgs e)
+        {
+            
+
+            cmbMarca.Items.Clear();
+            MarcaDB marcaDB = new MarcaDB();
+            List<Marca> listaMarca = new List<Marca>();
+            listaMarca = marcaDB.listar();
+
+            foreach (var marca in listaMarca)
+            {
+                cmbMarca.Items.Add(marca.Descripcion.ToString());
+
+            }
+
+
+
+            cmbCategoria.Items.Clear();
+            CategoriaDB categoriaDB = new CategoriaDB();
+            List<Categoria> listaCategoria = new List<Categoria>();
+            listaCategoria = categoriaDB.listar();
+
+            foreach (var Categoria in listaCategoria)
+            {
+                cmbCategoria.Items.Add(Categoria.Descripcion.ToString());
+            }
+            
+            MarcaDB mar = new MarcaDB();
+            CategoriaDB cat = new CategoriaDB();
+
+            try
+                {
+                    cmbMarca.DataSource = mar.listar();
+                    cmbCategoria.DataSource = cat.listar();
+                }
+                catch (Exception ex)
+                {
+
+                    MessageBox.Show(ex.ToString());
+                }
+
+
+
+            }
+        }
     }
-}
+

@@ -195,5 +195,7 @@ namespace Actividad2
             agregarMarca_categoria aux = new agregarMarca_categoria();
             aux.ShowDialog();   
         }
+
+
     }
 }
