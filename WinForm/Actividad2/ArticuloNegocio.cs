@@ -39,14 +39,32 @@ namespace Actividad2
                     aux.nombre = (string)lector["Nombre"];
                     aux.descripcion = (string)lector["Descripcion"];
                     aux.precio = (decimal)lector["Precio"];
-                    aux.imagen = new Imagen();
-                    aux.imagen.url = (string)lector["ImagenUrl"];
+
+                    if (!Convert.IsDBNull(lector["ImagenUrl"]))
+                    {
+                        aux.imagen = new Imagen();
+                        aux.imagen.url = (string)lector["ImagenUrl"];
+                    }
+
+
+
+                    if (!(lector["IdMarca"] is DBNull)) 
+                    { 
                     aux.Marca = new Marca();
                     int idMarca = (int)lector["IdMarca"];
                     aux.Marca.Descripcion = marcadb.obtener(idMarca);
-                    int idCategoria = (int)lector["IdCategoria"];
-                    aux.Categoria = new Categoria();
-                    aux.Categoria.Descripcion = categoriaDB.obtener(idCategoria);
+                    }
+
+
+                    if (!(lector["IdCategoria"] is DBNull))
+                    {
+                        int idCategoria = (int)lector["IdCategoria"];
+                        aux.Categoria = new Categoria();
+                        aux.Categoria.Descripcion = categoriaDB.obtener(idCategoria);
+                    }
+                    
+
+
 
                     lista.Add(aux);
                 }

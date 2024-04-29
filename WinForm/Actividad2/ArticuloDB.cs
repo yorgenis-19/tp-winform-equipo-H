@@ -149,7 +149,7 @@ namespace Actividad2
             AccesoDatos accesoDatos = new AccesoDatos();
             try
             {
-                accesoDatos.setearConsulta("update ARTICULOS set Codigo = @codigo, Nombre = @nombre, Descripcion = @descripcion, IdMarca = @idMarca, IdCategoria = @IdCategoria, Precio = @precio WHERE id = 1");
+                accesoDatos.setearConsulta("update ARTICULOS set Codigo = @codigo, Nombre = @nombre, Descripcion = @descripcion, IdMarca = @idMarca, IdCategoria = @IdCategoria, Precio = @precio WHERE Id = '" + articulo.id + "' ");
                 accesoDatos.setearParametro("@codigo", articulo.codigo);
                 accesoDatos.setearParametro("@nombre", articulo.nombre);
                 accesoDatos.setearParametro("@descripcion", articulo.descripcion);

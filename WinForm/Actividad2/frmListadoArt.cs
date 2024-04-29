@@ -39,11 +39,18 @@ namespace Actividad2
             //dgbArticulos.Columns["ImagenUrl"].Visible = false;
         }
 
-        private void dgbArticulos_SelectionChanged(object sender, EventArgs e)
-        {
-          Articulo seleccionado = (Articulo) dgbArticulos.CurrentRow.DataBoundItem;
-          cargarImagen(seleccionado.imagen.url);
-        }
+            private void dgbArticulos_SelectionChanged(object sender, EventArgs e)
+            {
+             if(dgbArticulos.CurrentRow != null)
+            {
+                Articulo seleccionado = (Articulo) dgbArticulos.CurrentRow.DataBoundItem;
+                if(seleccionado != null && seleccionado.imagen != null) 
+                { 
+                    cargarImagen(seleccionado.imagen.url);
+                }
+
+            }
+            }
 
         public void cargarImagen(string imagen)
         {
