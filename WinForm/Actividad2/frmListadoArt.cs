@@ -190,6 +190,10 @@ namespace Actividad2
 
         }
 
-
+        private void btnMarcaCategoria_Click(object sender, EventArgs e)
+        {
+            agregarMarca_categoria reg = new agregarMarca_categoria();
+            reg.ShowDialog();   
+        }
     }
 }
