@@ -18,7 +18,13 @@ namespace Actividad2
         {
             InitializeComponent();
         }
-      
+        public agregarArt(Articulo articulo)
+        {
+            InitializeComponent();
+            this.articulo = articulo;
+            Text = "Modificar Articulo";
+        }
+
 
         private void label2_Click(object sender, EventArgs e)
         {
@@ -108,47 +114,71 @@ namespace Actividad2
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-           /* if (!validateFields())
+                    
+                    MarcaDB marcaDB = new MarcaDB();
+                    CategoriaDB categoriaDB = new CategoriaDB();
+                    ArticuloDB articuloDB = new ArticuloDB();
+
+            try
             {
-                return;
-            }*/
-            MarcaDB marcaDB = new MarcaDB();
-            CategoriaDB categoriaDB = new CategoriaDB();
+                
 
-            ArticuloDB articuloDB = new ArticuloDB();
-            Articulo articulo = new Articulo();
-            articulo.codigo = txtCodigo.Text;
-            articulo.nombre = txtNombre.Text;
-            articulo.descripcion = txtDescripcion.Text;
-            articulo.Marca = new Marca();
-            articulo.Marca.Descripcion = cmbMarca.Text;
-            articulo.Marca.Id = marcaDB.obtener(articulo.Marca.Descripcion);
-            articulo.Categoria = new Categoria();
-            articulo.Categoria.Descripcion = cmbCategoria.Text;
-            articulo.Categoria.Id = categoriaDB.obtener(articulo.Categoria.Descripcion);
-            articulo.precio = nupdPrecio.Value;
+                    if (articulo == null)
+                        articulo = new Articulo();
 
-            articuloDB.agregar(articulo);
-
-            Articulo getId = new Articulo();
-            getId = articuloDB.obtener(txtCodigo.Text);
-
-            ImagenDB imagenDB = new ImagenDB();
-
-              Imagen imagen = new Imagen();
-              imagen.idArticulo = getId.id;
-              imagen.url = txtImagen.Text;
-              imagenDB.agregar(imagen);
-           
+                    articulo.codigo = txtCodigo.Text;
+                    articulo.nombre = txtNombre.Text;
+                    articulo.descripcion = txtDescripcion.Text;
+                    articulo.Marca = new Marca();
+                    articulo.Marca.Descripcion = cmbMarca.Text;
+                    articulo.Marca.Id = marcaDB.obtener(articulo.Marca.Descripcion);
+                    articulo.Categoria = new Categoria();
+                    articulo.Categoria.Descripcion = cmbCategoria.Text;
+                    articulo.Categoria.Id = categoriaDB.obtener(articulo.Categoria.Descripcion);
+                    articulo.precio = nupdPrecio.Value;
 
 
-            MessageBox.Show("Articulo agregado exitosamente");
-            txtCodigo.Text = "";
-            txtNombre.Text = "";
-            txtDescripcion.Text = "";
-            cmbMarca.Text = "";
-            cmbCategoria.Text = "";
-            nupdPrecio.Value = 0;
+                    if (articulo.id != 0)
+                    {
+                        articuloDB.modificar(articulo);
+                        MessageBox.Show("Articulo modificado exitosamente");
+
+                    }
+
+                    else
+                    {
+                        articuloDB.agregar(articulo);
+
+                        Articulo getId = new Articulo();
+                        getId = articuloDB.obtener(txtCodigo.Text);
+
+                        ImagenDB imagenDB = new ImagenDB();
+
+                        Imagen imagen = new Imagen();
+                        imagen.idArticulo = getId.id;
+                        imagen.url = txtImagen.Text;
+                        imagenDB.agregar(imagen);
+
+
+
+                        MessageBox.Show("Articulo agregado exitosamente");
+                        txtCodigo.Text = "";
+                        txtNombre.Text = "";
+                        txtDescripcion.Text = "";
+                        cmbMarca.Text = "";
+                        cmbCategoria.Text = "";
+                        nupdPrecio.Value = 0;
+                    }
+                    Close();
+                
+            }
+            catch (Exception )
+            {
+
+                throw;
+            }
+
+
         }
 
         private void button1_Click(object sender, EventArgs e)

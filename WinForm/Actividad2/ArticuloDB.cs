@@ -149,7 +149,7 @@ namespace Actividad2
             AccesoDatos accesoDatos = new AccesoDatos();
             try
             {
-                accesoDatos.setearConsulta("update ARTICULOS set Codigo = @codigo, Nombre = @nombre, Descripcion = @descripcion, IdMarca = @idMarca, IdCategoria = @IdCategoria, Precio = @precio WHERE Id = '" + articulo.id + "' ");
+                accesoDatos.setearConsulta("update ARTICULOS set Codigo = @codigo, Nombre = @nombre, Descripcion = @descripcion, IdMarca = @idMarca, IdCategoria = @IdCategoria, Precio = @precio WHERE id = '" + articulo.id + "'");
                 accesoDatos.setearParametro("@codigo", articulo.codigo);
                 accesoDatos.setearParametro("@nombre", articulo.nombre);
                 accesoDatos.setearParametro("@descripcion", articulo.descripcion);
@@ -162,7 +162,8 @@ namespace Actividad2
             catch (Exception ex)
             {
 
-                MessageBox.Show(ex.ToString());
+                MessageBox.Show("Error al modificar el artículo: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
             }
             finally
             {

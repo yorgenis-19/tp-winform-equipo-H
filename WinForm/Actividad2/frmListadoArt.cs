@@ -191,7 +191,7 @@ namespace Actividad2
         {
             Articulo seleccionado;
             seleccionado = (Articulo)dgbArticulos.CurrentRow.DataBoundItem;
-            Modificar modificar = new Modificar();
+            agregarArt modificar = new agregarArt(seleccionado);
             modificar.ShowDialog();
             cargar();
 

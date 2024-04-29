@@ -58,51 +58,6 @@ namespace Actividad2
             }
         }
 
-        private void Modificar_Load(object sender, EventArgs e)
-        {
-            
-
-            cmbMarca.Items.Clear();
-            MarcaDB marcaDB = new MarcaDB();
-            List<Marca> listaMarca = new List<Marca>();
-            listaMarca = marcaDB.listar();
-
-            foreach (var marca in listaMarca)
-            {
-                cmbMarca.Items.Add(marca.Descripcion.ToString());
-
-            }
-
-
-
-            cmbCategoria.Items.Clear();
-            CategoriaDB categoriaDB = new CategoriaDB();
-            List<Categoria> listaCategoria = new List<Categoria>();
-            listaCategoria = categoriaDB.listar();
-
-            foreach (var Categoria in listaCategoria)
-            {
-                cmbCategoria.Items.Add(Categoria.Descripcion.ToString());
-            }
-            
-            MarcaDB mar = new MarcaDB();
-            CategoriaDB cat = new CategoriaDB();
-
-            try
-                {
-                    cmbMarca.DataSource = mar.listar();
-                    cmbCategoria.DataSource = cat.listar();
-                }
-                catch (Exception ex)
-                {
-
-                    MessageBox.Show(ex.ToString());
-                }
-
-
-
-            }
-
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.Close();

@@ -211,7 +211,6 @@
             this.Controls.Add(this.lbBucar);
             this.Name = "Modificar";
             this.Text = "Modificar";
-            this.Load += new System.EventHandler(this.Modificar_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nupdPrecio)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
